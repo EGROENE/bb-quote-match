@@ -11,7 +11,7 @@ const allChars = [
 const charsInfo = [];
 function charsInfoIntoArray() {
     for (let char of allChars) {
-        let charInfoObject = { name: char.name, quote: char.quote };
+        let charInfoObject = { name: char.name, image: char.imageURL };
         charsInfo.push(charInfoObject);
     }
 }
