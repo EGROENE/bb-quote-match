@@ -14,3 +14,8 @@
     --size-56: 3.5rem;
     --size-64: 4rem;
 }
+
+#card-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
