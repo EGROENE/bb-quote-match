@@ -29,13 +29,13 @@ const allChars = [
     { name: 'Walter White', imageURL: './assets/walter-white.jpg', quote: 'What I came to realize is that fear, that’s the worst of it. That’s the real enemy. So, get up, get out in the real world and you kick that bastard as hard you can right in the teeth.'},
 ]
 
-// Randomize order of allChars:
+// Randomize order of allChars so that different chars will be used in each round:
 
 // Function to display cards containing each char's image and name:
 // Add data-name to each char card:
 function displayCharsNameImage() {
     for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
-        cardArea.innerHTML += "<div class='info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
+        cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='img-container'>"
         + "<img src='" + allChars[i].imageURL + "'>"
         + "</div>"
@@ -49,12 +49,23 @@ displayCharsNameImage();
 // Add data-name to each quote card:
 function displayCharsQuote() {
     for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
-        cardArea.innerHTML += "<div class='quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
+        cardArea.innerHTML += "<div class='char-card quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<p>" + allChars[i].quote + "</p>"
         + "</div>"
     }
 }
 displayCharsQuote();
+
+// Get each char card's DOM element:
+const charCards = document.getElementsByClassName('char-card');
+
+// Change cards' border color, depending on current bg:
+const setCardsBorderColor = () => {
+    for (let card of charCards) {
+        document.body.style.backgroundImage === 'url("./assets/bg-one.jpg")' ? card.style.borderColor = 'red' : card.style.borderColor = 'var(--bb-green)'
+    }
+}
+setCardsBorderColor();
 
 // Add function to randomize order in which the cards will display (DOM elements)
 
