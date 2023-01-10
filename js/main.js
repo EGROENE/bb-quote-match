@@ -1,13 +1,7 @@
 // Functionality to change pg background image:
 const backgrounds = [
-    'https://images.unsplash.com/photo-1508496869408-df596454df1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmV3JTIwbWV4aWNvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1552323543-4cffa4ffffe3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmV3JTIwbWV4aWNvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1570836173003-302a79cf1a33?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bmV3JTIwbWV4aWNvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1553002371-3753e25032b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG5ldyUyMG1leGljb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1534312663388-244b6be22824?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG5ldyUyMG1leGljb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1612824266241-9b810de083f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmV3JTIwbWV4aWNvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1517025423291-770fb99ae547?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FjdHVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1508893269700-a6c62c0610a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGRlc2VydCUyMHNreXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+    './assets/bg-one.jpg',
+    './assets/bg-four.jpg'
 ]
 
 const setBG = () => {
@@ -22,15 +16,17 @@ const cardArea = document.getElementById('card-area');
 // Array containing all info on all chars, each in its own object:
 const allChars = [
     { name: 'Badger', imageURL: './assets/badger.jpg', quote: 'Darth Vader had responsibilities. He was responsible for the Death Star.'},
-    { name: 'Badger', imageURL: './assets/badger.jpg', quote: 'Darth Vader had responsibilities. He was responsible for the Death Star.'},
-    { name: 'Badger', imageURL: './assets/badger.jpg', quote: 'Darth Vader had responsibilities. He was responsible for the Death Star.'},
-    { name: 'Badger', imageURL: './assets/badger.jpg', quote: 'Darth Vader had responsibilities. He was responsible for the Death Star.'},
-    { name: 'Badger', imageURL: './assets/badger.jpg', quote: 'Darth Vader had responsibilities. He was responsible for the Death Star.'},
-    { name: 'Badger', imageURL: './assets/badger.jpg', quote: 'Darth Vader had responsibilities. He was responsible for the Death Star.'},
-    { name: 'Badger', imageURL: './assets/badger.jpg', quote: 'Darth Vader had responsibilities. He was responsible for the Death Star.'},
-    { name: 'Badger', imageURL: './assets/badger.jpg', quote: 'Darth Vader had responsibilities. He was responsible for the Death Star.'},
-    { name: 'Badger', imageURL: './assets/badger.jpg', quote: 'Darth Vader had responsibilities. He was responsible for the Death Star.'},
-    { name: 'Badger', imageURL: './assets/badger.jpg', quote: 'Darth Vader had responsibilities. He was responsible for the Death Star.'},
+    { name: 'Gus Fring', imageURL: './assets/gus-fring.jpg', quote: 'And a man, a man provides. And he does it even when he’s not appreciated, or respected, or even loved. He simply bears up and he does it. Because he’s a man.'},
+    { name: 'Hank Schrader', imageURL: './assets/hank-schrader.jpg', quote: 'You’re the smartest guy I’ve ever met. And you’re too stupid to see… he made up his mind ten minutes ago.'},
+    { name: 'Jane Margolis', imageURL: './assets/jane-margolis.jpg', quote: 'Why should we do anything more than once? Should I just smoke this one cigarette? Maybe we should only have sex once if it’s the same thing? Should we just watch one sunset? Or live just one day? Because it’s new every time. Each time is a new experience.'},
+    { name: 'Jesse Pinkman', imageURL: './assets/jesse-pinkman.jpg', quote: 'Ah, like I came to you, begging to cook meth. Oh, hey, nerdiest old dude I know, you wanna come cook crystal? Please. I’d ask my diaper-wearing granny, but her wheelchair wouldn’t fit in the RV.'},
+    { name: 'Mike Ehrmantraut', imageURL: './assets/mike-ehrmantraut.jpg', quote: 'Just because you shot Jesse James, don’t make you Jesse James.'},
+    { name: 'Saul Goodman', imageURL: './assets/saul-goodman.jpg', quote: 'If you’re committed enough, you can make any story work.'},
+    { name: 'Skinny Pete', imageURL: './assets/skinny-pete.jpg', quote: 'Zombies are dead, man! What difference does it make what their job was when they was living?'},
+    { name: 'Skyler White', imageURL: './assets/skyler-white.jpg', quote: 'Someone needs to protect this family from the man who protects this family.'},
+    { name: 'Tuco Salamanca', imageURL: './assets/tuco-salamanca.jpg', quote: 'This kicks like a mule with its balls wrapped in duct tape!'},
+    { name: 'Walter White, Jr.', imageURL: './assets/walter-white-jr.jpg', quote: 'Do I look like a skater?'},
+    { name: 'Walter White', imageURL: './assets/walter-white.jpg', quote: 'What I came to realize is that fear, that’s the worst of it. That’s the real enemy. So, get up, get out in the real world and you kick that bastard as hard you can right in the teeth.'},
 ]
 
 // Randomize order of allChars:
