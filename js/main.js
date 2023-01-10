@@ -25,11 +25,29 @@ const allChars = [
     { name: 'Skinny Pete', imageURL: './assets/skinny-pete.jpg', quote: 'Zombies are dead, man! What difference does it make what their job was when they was living?'},
     { name: 'Skyler White', imageURL: './assets/skyler-white.jpg', quote: 'Someone needs to protect this family from the man who protects this family.'},
     { name: 'Tuco Salamanca', imageURL: './assets/tuco-salamanca.jpg', quote: 'This kicks like a mule with its balls wrapped in duct tape!'},
-    { name: 'Walter White, Jr.', imageURL: './assets/walter-white-jr.jpg', quote: 'Do I look like a skater?'},
+    { name: 'Walter White jr', imageURL: './assets/walter-white-jr.jpg', quote: 'Do I look like a skater?'},
     { name: 'Walter White', imageURL: './assets/walter-white.jpg', quote: 'What I came to realize is that fear, that’s the worst of it. That’s the real enemy. So, get up, get out in the real world and you kick that bastard as hard you can right in the teeth.'},
 ]
 
 // Randomize order of allChars so that different chars will be used in each round:
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle:
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+}
+shuffle(allChars);
 
 // Function to display cards containing each char's image and name:
 // Add data-name to each char card:
