@@ -1,3 +1,21 @@
+// Functionality to change pg background image:
+const backgrounds = [
+    'https://images.unsplash.com/photo-1508496869408-df596454df1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmV3JTIwbWV4aWNvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1552323543-4cffa4ffffe3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmV3JTIwbWV4aWNvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1570836173003-302a79cf1a33?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bmV3JTIwbWV4aWNvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1553002371-3753e25032b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG5ldyUyMG1leGljb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1534312663388-244b6be22824?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG5ldyUyMG1leGljb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1612824266241-9b810de083f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmV3JTIwbWV4aWNvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1517025423291-770fb99ae547?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FjdHVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1508893269700-a6c62c0610a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGRlc2VydCUyMHNreXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+]
+
+const setBG = () => {
+    let randNum = Math.floor(Math.random() * backgrounds.length);
+    document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
+}
+setBG();
+
 // Get the area where cards are to be displayed:
 const cardArea = document.getElementById('card-area');
 
