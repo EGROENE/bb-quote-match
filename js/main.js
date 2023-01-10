@@ -36,10 +36,12 @@ const allChars = [
 function displayCharsNameImage() {
     for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
         cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
+        + "<div class='info-container'>"
         + "<div class='img-container'>"
         + "<img src='" + allChars[i].imageURL + "'>"
         + "</div>"
         + "<p>" + allChars[i].name + "</p>"
+        + "</div>"
         + "</div>"
     }
 }
