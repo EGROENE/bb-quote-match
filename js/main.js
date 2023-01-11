@@ -182,7 +182,7 @@ function shuffle(array) {
     }
     return array;
 }
-shuffle(allChars);
+//shuffle(allChars);
 
 // Function to display cards containing each char's image and name:
 // Add data-name to each info card:
@@ -190,7 +190,8 @@ function displayCharsNameImage() {
     for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
     //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
-        + "<div class='info-container'>"
+        + "<div class='card-back'></div>"
+        + "<div class='info-container hidden'>"
         + "<div class='img-container'>"
         + "<img src='" + allChars[i].imageURL + "'>"
         + "</div>"
@@ -207,7 +208,8 @@ function displayCharsQuote() {
     for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
     //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
-        + "<p>" + allChars[i].quote + "</p>"
+        + "<div class='card-back'></div>"
+        + "<p class='hidden'>" + allChars[i].quote + "</p>"
         + "</div>"
     }
 }
@@ -232,9 +234,11 @@ function shuffleCharCardsDisplayed() {
         cardArea.appendChild(elem)
     })
 }
-shuffleCharCardsDisplayed();
+//shuffleCharCardsDisplayed();
 
 // Add EL to add each card to 'selectedCards' array
 // The name, img, or quote, depending on the type of card, should no longer be hidden (remove hidden class from card)
+
+
 // After the length of selectedCards is 2 & datanames are not equal, automatically del both from array & restore original styling after a few secs or add .hidden to each card's .info-container (if it isn't there already) once user clicks anywhere on the page
 // If length of selectedCards is 2 & both cards' datanames are equal, display congratulatory message ('Match!') and disable both cards or change hover to red circle w/ line thru it
