@@ -215,7 +215,10 @@ function displayCharsQuote() {
 displayCharsQuote();
 
 // Get each char card's DOM element:
-const charCards = document.getElementsByClassName('char-card');
+let charCards = document.getElementsByClassName('char-card');
+// Make array out of charCards:
+charCards = Array.from(charCards);
+console.log(charCards)
 
 // Change cards' border color, depending on current bg:
 const setCardsBorderColor = () => {
@@ -226,6 +229,12 @@ const setCardsBorderColor = () => {
 setCardsBorderColor();
 
 // Add function to randomize order in which the cards will display (DOM elements)
+function shuffleCharCardsDisplayed() {
+    shuffle(charCards).forEach(function(elem) {
+        cardArea.appendChild(elem)
+    })
+}
+shuffleCharCardsDisplayed();
 
 // Add EL to add each card to 'selectedCards' array
 // The name, img, or quote, depending on the type of card, should no longer be hidden (remove hidden class from card)
