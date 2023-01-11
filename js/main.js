@@ -183,7 +183,7 @@ function shuffle(array) {
   
     return array;
 }
-//shuffle(allChars);
+shuffle(allChars);
 
 // Function to display cards containing each char's image and name:
 // Add data-name to each char card:
@@ -238,5 +238,5 @@ shuffleCharCardsDisplayed();
 
 // Add EL to add each card to 'selectedCards' array
 // The name, img, or quote, depending on the type of card, should no longer be hidden (remove hidden class from card)
-// After the length of selectedCards is 2 & datanames are not equal, automatically del both from array & restore original styling after a few secs
-// If length of selectedCards is 2 & both cards' datanames are equal, display congratulatory message and disable both cards or change hover to red circle w/ line thru it
+// After the length of selectedCards is 2 & datanames are not equal, automatically del both from array & restore original styling after a few secs or add .hidden to each card's .info-container (if it isn't there already) once user clicks anywhere on the page
+// If length of selectedCards is 2 & both cards' datanames are equal, display congratulatory message ('Match!') and disable both cards or change hover to red circle w/ line thru it
