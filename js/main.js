@@ -185,7 +185,7 @@ function shuffle(array) {
 shuffle(allChars);
 
 // Function to display cards containing each char's image and name:
-// Add data-name to each char card:
+// Add data-name to each info card:
 function displayCharsNameImage() {
     for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
     //for (let i = 1; i < 2; i++) {
