@@ -238,7 +238,12 @@ function shuffleCharCardsDisplayed() {
 
 // Add EL to add each card to 'selectedCards' array
 // The name, img, or quote, depending on the type of card, should no longer be hidden (remove hidden class from card)
-
+for (let card of charCards) {
+    card.addEventListener('click', function() {
+        card.firstChild.classList.add('hidden');
+        card.children[1].classList.remove('hidden');
+    })
+}
 
 // After the length of selectedCards is 2 & datanames are not equal, automatically del both from array & restore original styling after a few secs or add .hidden to each card's .info-container (if it isn't there already) once user clicks anywhere on the page
 // If length of selectedCards is 2 & both cards' datanames are equal, display congratulatory message ('Match!') and disable both cards or change hover to red circle w/ line thru it
