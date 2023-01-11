@@ -180,7 +180,6 @@ function shuffle(array) {
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
-  
     return array;
 }
 shuffle(allChars);
@@ -218,7 +217,6 @@ displayCharsQuote();
 let charCards = document.getElementsByClassName('char-card');
 // Make array out of charCards:
 charCards = Array.from(charCards);
-console.log(charCards)
 
 // Change cards' border color, depending on current bg:
 const setCardsBorderColor = () => {
