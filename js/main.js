@@ -238,8 +238,14 @@ function shuffleCharCardsDisplayed() {
 
 // Add EL to add each card to 'selectedCards' array
 // The name, img, or quote, depending on the type of card, should no longer be hidden (remove hidden class from card)
+// Push selected card to selectedCards array
+let selectedCards = [];
 for (let card of charCards) {
     card.addEventListener('click', function() {
+        selectedCards.push(card);
+        console.log(selectedCards);
+        console.log(selectedCards.length);
+        console.log(selectedCards[selectedCards.length - 1].dataset.name);
         card.firstChild.classList.add('hidden');
         card.children[1].classList.remove('hidden');
     })
