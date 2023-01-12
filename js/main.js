@@ -294,6 +294,15 @@ for (let card of charCards) {
                 selectedCards = [];
             })
         } else if (selectedCards.length === 2 && (selectedCards[0].dataset.name === selectedCards[1].dataset.name)) {
+            document.getElementById('selection-result').style.display = 'block';
+            document.getElementById('selection-result').innerHTML += "<header>Match!</header>"
+
+            // Make 'Match!' message disappear after a few seconds:
+            setTimeout(function() {
+                document.getElementById('selection-result').style.display = 'none';
+                document.getElementById('selection-result').innerHTML = ""
+            }, 1200);
+
             // Add 'matched' to each card's classlist & push to matched cards array:
             for (let card of selectedCards) {
                 card.classList.add('matched');
