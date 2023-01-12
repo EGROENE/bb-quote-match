@@ -255,6 +255,7 @@ function shuffleCharCardsDisplayed() {
 // The name, img, or quote, depending on the type of card, should no longer be hidden (remove hidden class from card)
 // Push selected card to selectedCards array
 let selectedCards = [];
+let matchedCards = [];
 for (let card of charCards) {
     card.addEventListener('click', function() {
         selectedCards.push(card);
@@ -267,7 +268,9 @@ for (let card of charCards) {
             
             // Disable clicking of all cards:
             for (let card of charCards) {
-                card.style.pointerEvents = 'none';
+                if (!card.classList.contains('matched')) {
+                    card.style.pointerEvents = 'none';
+                }
             }
 
             // Display selection results box & add appropriate text:
@@ -275,16 +278,27 @@ for (let card of charCards) {
             document.getElementById('selection-result').innerHTML += "<header>Nope!</header>" + "<button id='try-again'>Try again</button>"
             
             // When resetting, clear selectedCards and restore styling to selection result box, selected cards:
+            // only reset cards that have not been matched
             document.getElementById('try-again').addEventListener('click', function() {
                 for (let card of charCards) {
                     document.getElementById('selection-result').innerHTML = ""
                     document.getElementById('selection-result').style.display = 'none';
-                    card.firstChild.classList.remove('hidden');
-                    card.children[1].classList.add('hidden');
-                    card.style.pointerEvents = 'auto';
+                    if (!matchedCards.includes(card)) {
+                        card.firstChild.classList.remove('hidden');
+                        card.children[1].classList.add('hidden');
+                        card.style.pointerEvents = 'auto';
+                    }
                 }
                 selectedCards = [];
             })
+        } else if (selectedCards.length === 2 && (selectedCards[0].dataset.name === selectedCards[1].dataset.name)) {
+            // Add 'matched' to each card's classlist & push to matched cards array:
+            for (let card of selectedCards) {
+                card.classList.add('matched');
+                matchedCards.push(card);
+                console.log(matchedCards)
+            }
+            selectedCards = [];
         }
     })
 }
