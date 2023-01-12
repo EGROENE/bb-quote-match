@@ -264,6 +264,7 @@ for (let card of charCards) {
         console.log(selectedCards[selectedCards.length - 1].dataset.name);
         card.firstChild.classList.add('hidden');
         card.children[1].classList.remove('hidden');
+        card.style.background = "rgba(0, 0, 0, 0.6)";
         if (selectedCards.length === 2 && (selectedCards[0].dataset.name != selectedCards[1].dataset.name)) {
             
             // Disable clicking of all cards:
@@ -287,6 +288,7 @@ for (let card of charCards) {
                         card.firstChild.classList.remove('hidden');
                         card.children[1].classList.add('hidden');
                         card.style.pointerEvents = 'auto';
+                        card.style.background = "black";
                     }
                 }
                 selectedCards = [];
