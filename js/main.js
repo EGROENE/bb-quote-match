@@ -10,6 +10,15 @@ const setBG = () => {
 }
 setBG();
 
+// On click of 'start' button in welcome box, hide welcome box and display #in-game-header & #card-area:
+const startBtn = document.getElementById('start-btn');
+startBtn.addEventListener('click', function() {
+    document.getElementsByTagName('main')[0].style.height = '100%';
+    document.getElementById('welcome-box').style.display = 'none';
+    document.getElementById('in-game-header').style.display = 'flex';
+    document.getElementById('card-area').style.display = 'grid';
+})
+
 // Get the area where cards are to be displayed:
 const cardArea = document.getElementById('card-area');
 
@@ -221,12 +230,18 @@ let charCards = document.getElementsByClassName('char-card');
 charCards = Array.from(charCards);
 
 // Change cards' border color, depending on current bg:
-const setCardsBorderColor = () => {
+const changeStylingBasedOnCurrentBG = () => {
+    if (document.body.style.backgroundImage === 'url("./assets/bg-one.jpg")') {
+        document.getElementById('in-game-header').style.backgroundColor = 'darkred';
+        document.getElementById('in-game-header').style.color = 'white';
+    } else {
+        document.getElementById('in-game-header').style.backgroundColor = 'var(--bb-green)';        
+    }
     for (let card of charCards) {
-        document.body.style.backgroundImage === 'url("./assets/bg-one.jpg")' ? card.style.borderColor = 'red' : card.style.borderColor = 'var(--bb-green)'
+        document.body.style.backgroundImage === 'url("./assets/bg-one.jpg")' ? card.style.borderColor = 'darkred' : card.style.borderColor = 'var(--bb-green)'
     }
 }
-setCardsBorderColor();
+changeStylingBasedOnCurrentBG();
 
 // Add function to randomize order in which the cards will display (DOM elements)
 function shuffleCharCardsDisplayed() {
