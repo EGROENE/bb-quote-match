@@ -263,8 +263,35 @@ for (let card of charCards) {
         console.log(selectedCards[selectedCards.length - 1].dataset.name);
         card.firstChild.classList.add('hidden');
         card.children[1].classList.remove('hidden');
+        if (selectedCards.length === 2 && (selectedCards[0].dataset.name != selectedCards[1].dataset.name)) {
+            
+            // Disable clicking of all cards:
+            for (let card of charCards) {
+                card.style.pointerEvents = 'none';
+            }
+
+            // Display selection results box & add appropriate text:
+            document.getElementById('selection-result').style.display = 'block';
+            document.getElementById('selection-result').innerHTML += "<header>Nope!</header>" + "<button id='try-again'>Try again</button>"
+            
+            // When resetting, clear selectedCards and restore styling to selection result box, selected cards:
+            document.getElementById('try-again').addEventListener('click', function() {
+                for (let card of charCards) {
+                    document.getElementById('selection-result').innerHTML = ""
+                    document.getElementById('selection-result').style.display = 'none';
+                    card.firstChild.classList.remove('hidden');
+                    card.children[1].classList.add('hidden');
+                    card.style.pointerEvents = 'auto';
+                }
+                selectedCards = [];
+            })
+        }
     })
 }
 
 // After the length of selectedCards is 2 & datanames are not equal, automatically del both from array & restore original styling after a few secs or add .hidden to each card's .info-container (if it isn't there already) once user clicks anywhere on the page
-// If length of selectedCards is 2 & both cards' datanames are equal, display congratulatory message ('Match!') and disable both cards or change hover to red circle w/ line thru it
+// Once selectedCards length is 2, make next click anywhere on page 'flip' the two selected cards (loop through charCards and if their info container or quote p is not hidden, add .hidden to these children's class list)
+
+
+
+// If length of selectedCards is 2 & both cards' datanames are equal, display congratulatory message ('Match!') and disable both cards and make 'match!' message disappear automatically after a few seconds. pause timer while it displays.
