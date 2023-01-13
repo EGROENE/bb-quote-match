@@ -190,7 +190,7 @@ function shuffle(array) {
     }
     return array;
 }
-shuffle(allChars);
+//shuffle(allChars);
 
 // Function to display cards containing each char's image and name:
 // Add data-name to each info card:
@@ -248,7 +248,7 @@ function shuffleCharCardsDisplayed() {
         cardArea.appendChild(elem)
     })
 }
-shuffleCharCardsDisplayed();
+//shuffleCharCardsDisplayed();
 
 // Add EL to add each card to 'selectedCards' array
 // The name, img, or quote, depending on the type of card, should no longer be hidden (remove hidden class from card)
