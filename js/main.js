@@ -100,7 +100,7 @@ const skinnyPeteQuotes = [
     'Hey man, I\'m slinging mad volume & fat benjis. I can\'t be all about spelling.',
     'The dude that comes out on the other side...he\'s not you. He\'s a color Xerox.',
     'I\'m pretty sure I seen the exact paint job on a Lexus.',
-    'You mean, this is not, like, just recreatonal?',
+    'You mean, this is not, like, just recreational?',
     'The whole thing feels kinda shady, morality-wise.'
 ]
 
