@@ -265,7 +265,6 @@ for (let card of charCards) {
         card.children[1].classList.remove('hidden');
         card.style.background = "rgba(0, 0, 0, 0.6)";
         if (selectedCards.length === 2 && (selectedCards[0].dataset.name != selectedCards[1].dataset.name)) {
-            
             // Disable clicking of all cards:
             for (let card of charCards) {
                 if (!card.classList.contains('matched')) {
@@ -325,7 +324,15 @@ for (let card of charCards) {
                 matchedCards.push(card);
                 console.log(matchedCards)
             }
+            console.log(matchedCards.length)
+            console.log(charCards.length)
             selectedCards = [];
+            if (matchedCards.length === charCards.length) {
+                document.getElementById('game-over').style.display = 'flex';
+                document.getElementById('play-again-btn').addEventListener('click', function() {
+                    window.location.reload();
+                })
+            }
         }
     })
 }
