@@ -195,7 +195,7 @@ shuffle(allChars);
 // Function to display cards containing each char's image and name:
 // Add data-name to each info card:
 function displayCharsNameImage() {
-    for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
+    for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
     //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
@@ -213,7 +213,7 @@ displayCharsNameImage();
 // Function to display cards containing each char's quote:
 // Add data-name to each quote card:
 function displayCharsQuote() {
-    for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
+    for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
     //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
