@@ -190,7 +190,7 @@ function shuffle(array) {
     }
     return array;
 }
-//shuffle(allChars);
+shuffle(allChars);
 
 // Initiate total matches tally:
 let totalMatches = 0;
@@ -198,7 +198,7 @@ let totalMatches = 0;
 // Function to display cards containing each char's image and name:
 // Add data-name to each info card:
 function displayCharsNameImage() {
-    for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
+    for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
     //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
@@ -216,7 +216,7 @@ displayCharsNameImage();
 // Function to display cards containing each char's quote:
 // Add data-name to each quote card:
 function displayCharsQuote() {
-    for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
+    for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
     //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
@@ -254,7 +254,7 @@ function shuffleCharCardsDisplayed() {
         cardArea.appendChild(elem)
     })
 }
-//shuffleCharCardsDisplayed();
+shuffleCharCardsDisplayed();
 
 // Add EL to add each card to 'selectedCards' array
 // The name, img, or quote, depending on the type of card, should no longer be hidden (remove hidden class from card)
@@ -280,13 +280,13 @@ for (let card of charCards) {
 
             // Display selection results box & add appropriate text:
             document.getElementById('selection-result').style.display = 'block';
-            document.getElementById('selection-result').innerHTML += "<header>Nope!</header>" 
+            document.getElementById('selection-result').innerHTML += "<header>Nope!</header>"
             
             // When resetting, clear selectedCards and restore styling to selection result box, selected cards:
             // only reset cards that have not been matched
             // BELOW COMMENTED-OUT CODE SHOULD BE USED IF USING A 'TRY AGAIN' BUTTON TO RESET CARDS AFTER A MISMATCH
             /* document.getElementById('try-again').addEventListener('click', function() {
-                + "<button id='try-again'>Try again</button>" // goes in selection-result innerHTML if using 'try again' button
+                /////// + "<button id='try-again'>Try again</button>"
                 for (let card of charCards) {
                     document.getElementById('selection-result').innerHTML = ""
                     document.getElementById('selection-result').style.display = 'none';
