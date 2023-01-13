@@ -267,6 +267,7 @@ for (let card of charCards) {
         console.log(selectedCards);
         console.log(selectedCards.length);
         console.log(selectedCards[selectedCards.length - 1].dataset.name);
+        //card.classList.add('animate__animate', 'animate__flipOutY')
         card.firstChild.classList.add('hidden');
         card.children[1].classList.remove('hidden');
         card.style.background = "rgba(0, 0, 0, 0.6)";
