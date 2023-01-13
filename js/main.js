@@ -328,7 +328,9 @@ for (let card of charCards) {
                 totalMatches += 1;
                 document.getElementById('card-tally').textContent = totalMatches + ' / ' + (charCards.length / 2);
                 document.getElementById('selection-result').style.display = 'block';
-                document.getElementById('selection-result').innerHTML += "<header>Match!</header>"
+                if (matchedCards.length != charCards.length) {
+                    document.getElementById('selection-result').innerHTML += "<header>Match!</header>"
+                }
             }, 1000)
 
             // Make 'Match!' message disappear after a few seconds:
