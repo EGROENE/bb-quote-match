@@ -267,6 +267,7 @@ for (let card of charCards) {
         console.log(selectedCards);
         console.log(selectedCards.length);
         console.log(selectedCards[selectedCards.length - 1].dataset.name);
+        card.style.pointerEvents = 'none';
         card.firstChild.classList.add('hidden');
         card.children[1].classList.remove('hidden');
         card.style.background = "rgba(0, 0, 0, 0.6)";
