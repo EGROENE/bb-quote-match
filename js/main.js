@@ -267,11 +267,14 @@ for (let card of charCards) {
         console.log(selectedCards);
         console.log(selectedCards.length);
         console.log(selectedCards[selectedCards.length - 1].dataset.name);
-        //card.classList.add('animate__animate', 'animate__flipOutY')
-        card.style.pointerEvents = 'none';
-        card.firstChild.classList.add('hidden');
-        card.children[1].classList.remove('hidden');
-        card.style.background = "rgba(0, 0, 0, 0.6)";
+        card.classList.add('animate__animate', 'animate__flipOutY');
+        card.classList.add('animate__animate', 'animate__flipInY');
+        setTimeout(function() {
+            card.style.pointerEvents = 'none';
+            card.firstChild.classList.add('hidden');
+            card.children[1].classList.remove('hidden');
+            card.style.background = "rgba(0, 0, 0, 0.6)";
+        }, 500)
         if (selectedCards.length === 2 && (selectedCards[0].dataset.name != selectedCards[1].dataset.name)) {
             // Disable clicking of all cards:
             for (let card of charCards) {
@@ -281,8 +284,11 @@ for (let card of charCards) {
             }
 
             // Display selection results box & add appropriate text:
-            document.getElementById('selection-result').style.display = 'block';
-            document.getElementById('selection-result').innerHTML += "<header>Nope!</header>"
+            // Account for animation:
+            setTimeout(function() {
+                document.getElementById('selection-result').style.display = 'block';
+                document.getElementById('selection-result').innerHTML += "<header>Nope!</header>"
+            }, 1000)
             
             // When resetting, clear selectedCards and restore styling to selection result box, selected cards:
             // only reset cards that have not been matched
@@ -307,6 +313,8 @@ for (let card of charCards) {
                     document.getElementById('selection-result').innerHTML = ""
                     document.getElementById('selection-result').style.display = 'none';
                     if (!matchedCards.includes(card)) {
+                        card.classList.remove('animate__animate', 'animate__flipOutY');
+                        card.classList.remove('animate__animate', 'animate__flipInY');
                         card.firstChild.classList.remove('hidden');
                         card.children[1].classList.add('hidden');
                         card.style.pointerEvents = 'auto';
@@ -316,16 +324,18 @@ for (let card of charCards) {
                 selectedCards = [];
             }, 2000)
         } else if (selectedCards.length === 2 && (selectedCards[0].dataset.name === selectedCards[1].dataset.name)) {
-            totalMatches += 1;
-            document.getElementById('card-tally').textContent = totalMatches + ' / ' + (charCards.length / 2);
-            document.getElementById('selection-result').style.display = 'block';
-            document.getElementById('selection-result').innerHTML += "<header>Match!</header>"
+            setTimeout(function() {
+                totalMatches += 1;
+                document.getElementById('card-tally').textContent = totalMatches + ' / ' + (charCards.length / 2);
+                document.getElementById('selection-result').style.display = 'block';
+                document.getElementById('selection-result').innerHTML += "<header>Match!</header>"
+            }, 1000)
 
             // Make 'Match!' message disappear after a few seconds:
             setTimeout(function() {
                 document.getElementById('selection-result').style.display = 'none';
                 document.getElementById('selection-result').innerHTML = ""
-            }, 1200);
+            }, 1700);
 
             // Add 'matched' to each card's classlist & push to matched cards array:
             for (let card of selectedCards) {
