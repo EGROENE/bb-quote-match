@@ -320,6 +320,7 @@ for (let card of charCards) {
 
             // Add 'matched' to each card's classlist & push to matched cards array:
             for (let card of selectedCards) {
+                card.style.pointerEvents = 'none';
                 card.classList.add('matched');
                 matchedCards.push(card);
                 console.log(matchedCards)
