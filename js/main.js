@@ -40,8 +40,8 @@ const gusFringQuotes = [
 ]
 
 const hankSchraderQuotes = [
-    'You’re the smartest guy I’ve ever met. And you’re too stupid to see… he made up his mind ten minutes ago.',
-    'I’ve seen better acting in an epileptic whorehouse.',
+    'You’re the smartest guy I\'ve ever met. And you\'re too stupid to see… he made up his mind ten minutes ago.',
+    'I\'ve seen better acting in an epileptic whorehouse.',
     'Does the Pope shit in his hat?',
     'Sit down! Sit your ass down! Comprende! Siéntate!',
     'Now look buddy, the last thing I want to do is get you in hot water, but some meth monkey had a feeding frenzy in here.',
@@ -52,20 +52,20 @@ const hankSchraderQuotes = [
 ]
 
 const janeMargolisQuotes = [
-    'Why should we do anything more than once? Should I just smoke this one cigarette? Maybe we should only have sex once if it’s the same thing? Should we just watch one sunset? Or live just one day? Because it’s new every time. Each time is a new experience.',
+    'Why should we do anything more than once? Should I just smoke this one cigarette? Maybe we should only have sex once if it\'s the same thing? Should we just watch one sunset? Or live just one day? Because it\'s new every time. Each time is a new experience.',
     'Do right by Jesse tonight, or I will burn you to the ground.',
     'I\'ve gone where the Universe takes me my whole life. It\'s better to make those decisions yourself.',
     'Wow, that was so sweet. I think I threw up in my mouth a little.',
 ]
 
 const jessePinkmanQuotes = [
-    'Ah, like I came to you, begging to cook meth. Oh, hey, nerdiest old dude I know, you wanna come cook crystal? Please. I’d ask my diaper-wearing granny, but her wheelchair wouldn’t fit in the RV.',
+    'Ah, like I came to you, begging to cook meth. Oh, hey, nerdiest old dude I know, you wanna come cook crystal? Please. I\'d ask my diaper-wearing granny, but her wheelchair wouldn\'t fit in the RV.',
     'Yeah Mr. White! You really do have a plan! Yeah science!',
-    'Nah come on… man, some straight like you giant stick up his ass all of a sudden at age what, 60, he’s just going to break bad?',
+    'Nah come on… man, some straight like you giant stick up his ass all of a sudden at age what, 60, he\'s just going to break bad?',
     'Hey, you girls want to meet my fat stack?',
     'What good is being an outlaw when you have responsibilities?',
-    'You got me riding shotgun to every dark anal recess of this state. It’d be nice if you clued me in a little.',
-    'Yo 148, 3-to-the-3-to-the-6-to-the-9. Representin’ the ABQ. What up, biatch? Leave it at the tone!',
+    'You got me riding shotgun to every dark anal recess of this state. It\'d be nice if you clued me in a little.',
+    'Yo 148, 3-to-the-3-to-the-6-to-the-9. Representin\' the ABQ. What up, biatch? Leave it at the tone!',
     'This is my own private domicile and I will not be harassed…bitch!',
     'Are we in the meth business, or the money business?',
     'Yeah. Totally Kafkaesque.',
@@ -73,7 +73,7 @@ const jessePinkmanQuotes = [
 ]
 
 const mikeEhrmantrautQuotes = [
-    'Just because you shot Jesse James, don’t make you Jesse James.',
+    'Just because you shot Jesse James, don\'t make you Jesse James.',
     'I assure you that I can kill you from way over here if it makes you feel any better.',
     'You are a time bomb.',
     'Everyone sounds like Meryl Streep with a gun to their head.',
@@ -109,8 +109,7 @@ const skylerWhiteQuotes = [
     'We\'ve come this far..what\'s one more?',
     'When I put everything into Quicken, nothing flashed red, so that\'s gotta mean it\'s OK, right?',
     'Marie - shut up!',
-    'If I have to hear one more time that you did this for the family...',
-    ''
+    'If I have to hear one more time that you did this for the family...'
 ]
 
 const tucoSalamancaQuotes = [
@@ -140,16 +139,16 @@ const walterWhiteQuotes = [
     "I won.",
     "If you believe that there's a Hell, we're pretty much already going there.",
     "Well, technically, chemistry is the study of matter. But I prefer to see it as the study of change.",
-    "You clearly don’t know who you’re talking to, so let me clue you in. I am not in danger, Skyler. I am the danger. A guy opens his door and gets shot, and you think that of me? No! I am the one who knocks!",
-    "Right now, what I need, is for you to climb down out of my ass. Can you do that? Will you do that for me honey? Will you please, just once, get off my ass? You know? I’d appreciate it. I really would.",
+    "You clearly don't know who you're talking to, so let me clue you in. I am not in danger, Skyler. I am the danger. A guy opens his door and gets shot, and you think that of me? No! I am the one who knocks!",
+    "Right now, what I need, is for you to climb down out of my ass. Can you do that? Will you do that for me honey? Will you please, just once, get off my ass? You know? I'd appreciate it. I really would.",
     "Smoking marijuana, eating Cheetos, and masturbating do not constitute plans in my book.",
     "Fuck you and your eyebrows.",
-    "If you don’t know who I am, then maybe your best course would be to tread lightly.",
+    "If you don't know who I am, then maybe your best course would be to tread lightly.",
     "I did it for me. I liked it. I was good at it. And, I was really…I was alive.",
-    "Jesse, you asked me if I was in the meth business, or the money business… Neither. I’m in the empire business.",
-    "We tried to poison you. We tried to poison you because you’re an insane, degenerate piece of filth, and you deserve to die.",
+    "Jesse, you asked me if I was in the meth business, or the money business… Neither. I'm in the empire business.",
+    "We tried to poison you. We tried to poison you because you're an insane, degenerate piece of filth, and you deserve to die.",
     "Stay out of my territory.",
-    "Jesse, you asked me if I was in the meth business, or the money business… Neither. I’m in the empire business."
+    "Jesse, you asked me if I was in the meth business, or the money business… Neither. I'm in the empire business."
 ]
 
 // Function to return random quote from any char quote array:
@@ -191,7 +190,7 @@ function shuffle(array) {
     }
     return array;
 }
-//shuffle(allChars);
+shuffle(allChars);
 
 // Function to display cards containing each char's image and name:
 // Add data-name to each info card:
@@ -249,7 +248,7 @@ function shuffleCharCardsDisplayed() {
         cardArea.appendChild(elem)
     })
 }
-//shuffleCharCardsDisplayed();
+shuffleCharCardsDisplayed();
 
 // Add EL to add each card to 'selectedCards' array
 // The name, img, or quote, depending on the type of card, should no longer be hidden (remove hidden class from card)
@@ -276,11 +275,13 @@ for (let card of charCards) {
 
             // Display selection results box & add appropriate text:
             document.getElementById('selection-result').style.display = 'block';
-            document.getElementById('selection-result').innerHTML += "<header>Nope!</header>" + "<button id='try-again'>Try again</button>"
+            document.getElementById('selection-result').innerHTML += "<header>Nope!</header>" 
             
             // When resetting, clear selectedCards and restore styling to selection result box, selected cards:
             // only reset cards that have not been matched
-            document.getElementById('try-again').addEventListener('click', function() {
+            // BELOW COMMENTED-OUT CODE SHOULD BE USED IF USING A 'TRY AGAIN' BUTTON TO RESET CARDS AFTER A MISMATCH
+            /* document.getElementById('try-again').addEventListener('click', function() {
+                + "<button id='try-again'>Try again</button>" // goes in selection-result innerHTML if using 'try again' button
                 for (let card of charCards) {
                     document.getElementById('selection-result').innerHTML = ""
                     document.getElementById('selection-result').style.display = 'none';
@@ -292,7 +293,21 @@ for (let card of charCards) {
                     }
                 }
                 selectedCards = [];
-            })
+            }) */
+            // BELOW FUNC IS TO AUTOMATICALLY RESET CARDS AFTER A MISMATCH AFTER A CERTAIN PERIOD OF TIME
+            setTimeout(function() {
+                for (let card of charCards) {
+                    document.getElementById('selection-result').innerHTML = ""
+                    document.getElementById('selection-result').style.display = 'none';
+                    if (!matchedCards.includes(card)) {
+                        card.firstChild.classList.remove('hidden');
+                        card.children[1].classList.add('hidden');
+                        card.style.pointerEvents = 'auto';
+                        card.style.background = "black";
+                    }
+                }
+                selectedCards = [];
+            }, 2000)
         } else if (selectedCards.length === 2 && (selectedCards[0].dataset.name === selectedCards[1].dataset.name)) {
             document.getElementById('selection-result').style.display = 'block';
             document.getElementById('selection-result').innerHTML += "<header>Match!</header>"
