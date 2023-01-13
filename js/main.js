@@ -348,6 +348,7 @@ for (let card of charCards) {
             console.log(charCards.length)
             selectedCards = [];
             if (matchedCards.length === charCards.length) {
+                document.getElementById('game-over').classList.add('animate__animated', 'animate__fadeInUp');
                 document.getElementById('game-over').style.display = 'flex';
                 document.getElementById('play-again-btn').addEventListener('click', function() {
                     window.location.reload();
