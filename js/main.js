@@ -192,6 +192,9 @@ function shuffle(array) {
 }
 //shuffle(allChars);
 
+// Initiate total matches tally:
+let totalMatches = 0;
+
 // Function to display cards containing each char's image and name:
 // Add data-name to each info card:
 function displayCharsNameImage() {
@@ -227,6 +230,9 @@ displayCharsQuote();
 let charCards = document.getElementsByClassName('char-card');
 // Make array out of charCards:
 charCards = Array.from(charCards);
+
+// Display initial match tally:
+document.getElementById('card-tally').textContent += 'Matches: ' + totalMatches + ' / ' + (charCards.length / 2);
 
 // Change cards' border color, depending on current bg:
 const changeStylingBasedOnCurrentBG = () => {
@@ -308,6 +314,8 @@ for (let card of charCards) {
                 selectedCards = [];
             }, 2000)
         } else if (selectedCards.length === 2 && (selectedCards[0].dataset.name === selectedCards[1].dataset.name)) {
+            totalMatches += 1;
+            document.getElementById('card-tally').textContent = 'Matches: ' + totalMatches + ' / ' + (charCards.length / 2);
             document.getElementById('selection-result').style.display = 'block';
             document.getElementById('selection-result').innerHTML += "<header>Match!</header>"
 
