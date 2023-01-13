@@ -232,7 +232,7 @@ let charCards = document.getElementsByClassName('char-card');
 charCards = Array.from(charCards);
 
 // Display initial match tally:
-document.getElementById('card-tally').textContent += 'Matches: ' + totalMatches + ' / ' + (charCards.length / 2);
+document.getElementById('card-tally').textContent += totalMatches + ' / ' + (charCards.length / 2);
 
 // Change cards' border color, depending on current bg:
 const changeStylingBasedOnCurrentBG = () => {
@@ -315,7 +315,7 @@ for (let card of charCards) {
             }, 2000)
         } else if (selectedCards.length === 2 && (selectedCards[0].dataset.name === selectedCards[1].dataset.name)) {
             totalMatches += 1;
-            document.getElementById('card-tally').textContent = 'Matches: ' + totalMatches + ' / ' + (charCards.length / 2);
+            document.getElementById('card-tally').textContent = totalMatches + ' / ' + (charCards.length / 2);
             document.getElementById('selection-result').style.display = 'block';
             document.getElementById('selection-result').innerHTML += "<header>Match!</header>"
 
