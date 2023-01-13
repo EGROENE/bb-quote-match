@@ -100,7 +100,7 @@ const skinnyPeteQuotes = [
     'Hey man, I\'m slinging mad volume & fat benjis. I can\'t be all about spelling.',
     'The dude that comes out on the other side...he\'s not you. He\'s a color Xerox.',
     'I\'m pretty sure I seen the exact paint job on a Lexus.',
-    'You mean, this is not, like, just recreatonal?',
+    'You mean, this is not, like, just recreational?',
     'The whole thing feels kinda shady, morality-wise.'
 ]
 
@@ -195,7 +195,7 @@ function shuffle(array) {
 // Function to display cards containing each char's image and name:
 // Add data-name to each info card:
 function displayCharsNameImage() {
-    for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
+    for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
     //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
@@ -213,7 +213,7 @@ displayCharsNameImage();
 // Function to display cards containing each char's quote:
 // Add data-name to each quote card:
 function displayCharsQuote() {
-    for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
+    for (let i = 0; i < allChars.length - (allChars.length - 6); i++) {
     //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
