@@ -1,7 +1,7 @@
-// Functionality to change pg background image:
+// FUNCTIONALITY TO CHANGE PAGE BACKGROUND IMAGE:
 const backgrounds = [
     './assets/bg-one.jpg',
-    './assets/bg-four.jpg'
+    './assets/bg-two.jpg'
 ]
 
 const setBG = () => {
@@ -9,6 +9,10 @@ const setBG = () => {
     document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
 }
 setBG();
+
+// Assign bg one to variable:
+const bgOneImg = 'url("./assets/bg-one.jpg")';
+///////////////////////////////////////////////
 
 // On click of 'start' button in welcome box, hide welcome box and display #in-game-header & #card-area:
 const startBtn = document.getElementById('start-btn');
@@ -21,6 +25,9 @@ startBtn.addEventListener('click', function() {
 
 // Get the area where cards are to be displayed:
 const cardArea = document.getElementById('card-area');
+
+// Assign in-game header to variable:
+const inGameHeader = document.getElementById('in-game-header');
 
 // Array for each char, containing multiple quotes:
 const badgerQuotes = [
@@ -199,7 +206,6 @@ let totalMatches = 0;
 // Add data-name to each info card:
 function displayCharsNameImage() {
     for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
-    //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
         + "<div class='info-container hidden'>"
@@ -232,18 +238,18 @@ let charCards = document.getElementsByClassName('char-card');
 charCards = Array.from(charCards);
 
 // Display initial match tally:
-document.getElementById('card-tally').textContent += totalMatches + ' / ' + (charCards.length / 2);
+document.getElementById('match-tally').textContent += totalMatches + ' / ' + (charCards.length / 2);
 
 // Change cards' border color, depending on current bg:
 const changeStylingBasedOnCurrentBG = () => {
-    if (document.body.style.backgroundImage === 'url("./assets/bg-one.jpg")') {
-        document.getElementById('in-game-header').style.backgroundColor = 'darkred';
-        document.getElementById('in-game-header').style.color = 'white';
+    if (document.body.style.backgroundImage === bgOneImg) {
+        inGameHeader.style.backgroundColor = 'darkred';
+        inGameHeader.style.color = 'white';
     } else {
-        document.getElementById('in-game-header').style.backgroundColor = 'var(--bb-green)';        
+        inGameHeader.style.backgroundColor = 'var(--bb-green)';        
     }
     for (let card of charCards) {
-        document.body.style.backgroundImage === 'url("./assets/bg-one.jpg")' ? card.style.borderColor = 'darkred' : card.style.borderColor = 'var(--bb-green)'
+        document.body.style.backgroundImage === bgOneImg ? card.style.borderColor = 'darkred' : card.style.borderColor = 'var(--bb-green)'
     }
 }
 changeStylingBasedOnCurrentBG();
@@ -256,19 +262,32 @@ function shuffleCharCardsDisplayed() {
 }
 shuffleCharCardsDisplayed();
 
-// Add EL to add each card to 'selectedCards' array
-// The name, img, or quote, depending on the type of card, should no longer be hidden (remove hidden class from card)
-// Push selected card to selectedCards array
+// Declare arrays to contain currently selected cards, then any cards that have been matched:
 let selectedCards = [];
 let matchedCards = [];
-for (let card of charCards) {
+
+// ASSIGN PARTS OF DOCUMENT TO VARIABLES:
+// Assign selection result box to variable:
+const selectionResultBox = document.getElementById('selection-result');
+// Get matches tally area:
+const matchTally = document.getElementById('match-tally');
+// Get game-over box:
+const gameOverBox = document.getElementById('game-over');
+// Get play-again button:
+const playAgainBtn = document.getElementById('play-again-btn');
+
+// Add EL to add each card to 'selectedCards' array
+ for (let card of charCards) {
     card.addEventListener('click', function() {
+
+        // Push current selected card to selectedCards:
         selectedCards.push(card);
-        console.log(selectedCards);
-        console.log(selectedCards.length);
-        console.log(selectedCards[selectedCards.length - 1].dataset.name);
+
+        // Animate the card when it is clicked:
         card.classList.add('animate__animate', 'animate__flipOutY');
         card.classList.add('animate__animate', 'animate__flipInY');
+
+        // After animation, remove animations (so they can be added again when flipped back over after a mismatch), disable clicking on the card again, hide card 'back', reveal card info, change background:
         setTimeout(function() {
             card.classList.remove('animate__animate', 'animate__flipOutY');
             card.classList.remove('animate__animate', 'animate__flipInY');
@@ -276,38 +295,43 @@ for (let card of charCards) {
             card.firstChild.classList.add('hidden');
             card.children[1].classList.remove('hidden');
             card.style.background = "rgba(0, 0, 0, 0.6)";
-        }, 500)
+        }, 500);
+
+        // If two non-matching cards are selected...
         if (selectedCards.length === 2 && (selectedCards[0].dataset.name != selectedCards[1].dataset.name)) {
-            // Disable clicking of all cards:
+
+            // Disable clicking of all cards that haven't been matched:
             for (let card of charCards) {
                 if (!card.classList.contains('matched')) {
                     card.style.pointerEvents = 'none';
                 }
             }
 
-            // Display selection results box & add appropriate text:
-            // Account for animation:
+            // Display selection results box & add appropriate text, accounting for animation:
             setTimeout(function() {
-                document.getElementById('selection-result').style.display = 'block';
-                document.getElementById('selection-result').innerHTML += "<header>Nope!</header>"
+                selectionResultBox.style.display = 'block';
+                selectionResultBox.innerHTML += "<header>Nope!</header>"
+
+                // Animate selected cards when they are flipped back over:
                 for (let card of selectedCards) {
                     card.classList.add('animate__animate', 'animate__flipOutY');
                     card.classList.add('animate__animate', 'animate__flipInY');
                 }
+
+                // Display card 'back', hide card info, change background:
                 setTimeout(function() {
                     for (let card of selectedCards) {
                         card.firstChild.classList.remove('hidden');
                         card.children[1].classList.add('hidden');
                         card.style.background = "black";
                     }
-                }, 500)
-            }, 1000)
+                }, 500);
+            }, 1500);
             
-            // When resetting, clear selectedCards and restore styling to selection result box, selected cards:
-            // only reset cards that have not been matched
             // BELOW COMMENTED-OUT CODE SHOULD BE USED IF USING A 'TRY AGAIN' BUTTON TO RESET CARDS AFTER A MISMATCH
+            // KEEP FOR NOW, IN CASE MIND CHANGES
             /* document.getElementById('try-again').addEventListener('click', function() {
-                /////// + "<button id='try-again'>Try again</button>"
+                /////// + "<button id='try-again'>Try again</button>" - add this part to innerHTML of selectionResultBox after 'Nope!'
                 for (let card of charCards) {
                     document.getElementById('selection-result').innerHTML = ""
                     document.getElementById('selection-result').style.display = 'none';
@@ -320,62 +344,65 @@ for (let card of charCards) {
                 }
                 selectedCards = [];
             }) */
+
             // BELOW FUNC IS TO AUTOMATICALLY RESET CARDS AFTER A MISMATCH AFTER A CERTAIN PERIOD OF TIME
             setTimeout(function() {
                 for (let card of charCards) {
-                    document.getElementById('selection-result').innerHTML = ""
-                    document.getElementById('selection-result').style.display = 'none';
+                    // Del results message (Nope!):
+                    selectionResultBox.innerHTML = ""
+
+                    // Hide selection result box:
+                    selectionResultBox.style.display = 'none';
+
+                    // If card is not matched...
                     if (!matchedCards.includes(card)) {
+                        // Remove flip animations so they can be added again when clicked again:
                         card.classList.remove('animate__animate', 'animate__flipOutY');
                         card.classList.remove('animate__animate', 'animate__flipInY');
-                        card.firstChild.classList.remove('hidden');
-                        card.children[1].classList.add('hidden');
+                        //card.firstChild.classList.remove('hidden');
+                        //card.children[1].classList.add('hidden');
                         card.style.pointerEvents = 'auto';
                         card.style.background = "black";
                     }
                 }
                 selectedCards = [];
-            }, 2000)
+            }, 2750)
+        // If 2 cards are selected and they match...    
         } else if (selectedCards.length === 2 && (selectedCards[0].dataset.name === selectedCards[1].dataset.name)) {
             setTimeout(function() {
+                // Add one to matches tally:
                 totalMatches += 1;
-                document.getElementById('card-tally').textContent = totalMatches + ' / ' + (charCards.length / 2);
-                document.getElementById('selection-result').style.display = 'block';
+                // Update and display the new matches tally:
+                matchTally.textContent = totalMatches + ' / ' + (charCards.length / 2);
+                // Display selection result box:
+                // If the match isn't the final one of the game, display 'Match!':
                 if (matchedCards.length != charCards.length) {
-                    document.getElementById('selection-result').innerHTML += "<header>Match!</header>"
+                    selectionResultBox.style.display = 'block';
+                    selectionResultBox.innerHTML += "<header>Match!</header>"
                 }
             }, 1000)
 
-            // Make 'Match!' message disappear after a few seconds:
+            // Make 'Match!' message disappear after a bit:
             setTimeout(function() {
-                document.getElementById('selection-result').style.display = 'none';
-                document.getElementById('selection-result').innerHTML = ""
+                selectionResultBox.style.display = 'none';
+                selectionResultBox.innerHTML = ""
             }, 1700);
 
-            // Add 'matched' to each card's classlist & push to matched cards array:
+            // Disable current cards matched add 'matched' to each card's classlist & push to matched cards array:
             for (let card of selectedCards) {
                 card.style.pointerEvents = 'none';
                 card.classList.add('matched');
                 matchedCards.push(card);
-                console.log(matchedCards)
             }
-            console.log(matchedCards.length)
-            console.log(charCards.length)
+            // Reset selectedCards array for next turn:
             selectedCards = [];
             if (matchedCards.length === charCards.length) {
-                document.getElementById('game-over').classList.add('animate__animated', 'animate__fadeInUp');
-                document.getElementById('game-over').style.display = 'flex';
-                document.getElementById('play-again-btn').addEventListener('click', function() {
+                gameOverBox.classList.add('animate__animated', 'animate__fadeInUp');
+                gameOverBox.style.display = 'flex';
+                playAgainBtn.addEventListener('click', function() {
                     window.location.reload();
                 })
             }
         }
     })
 }
-
-// After the length of selectedCards is 2 & datanames are not equal, automatically del both from array & restore original styling after a few secs or add .hidden to each card's .info-container (if it isn't there already) once user clicks anywhere on the page
-// Once selectedCards length is 2, make next click anywhere on page 'flip' the two selected cards (loop through charCards and if their info container or quote p is not hidden, add .hidden to these children's class list)
-
-
-
-// If length of selectedCards is 2 & both cards' datanames are equal, display congratulatory message ('Match!') and disable both cards and make 'match!' message disappear automatically after a few seconds. pause timer while it displays.
