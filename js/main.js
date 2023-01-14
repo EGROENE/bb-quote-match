@@ -270,6 +270,8 @@ for (let card of charCards) {
         card.classList.add('animate__animate', 'animate__flipOutY');
         card.classList.add('animate__animate', 'animate__flipInY');
         setTimeout(function() {
+            card.classList.remove('animate__animate', 'animate__flipOutY');
+            card.classList.remove('animate__animate', 'animate__flipInY');
             card.style.pointerEvents = 'none';
             card.firstChild.classList.add('hidden');
             card.children[1].classList.remove('hidden');
@@ -288,6 +290,17 @@ for (let card of charCards) {
             setTimeout(function() {
                 document.getElementById('selection-result').style.display = 'block';
                 document.getElementById('selection-result').innerHTML += "<header>Nope!</header>"
+                for (let card of selectedCards) {
+                    card.classList.add('animate__animate', 'animate__flipOutY');
+                    card.classList.add('animate__animate', 'animate__flipInY');
+                }
+                setTimeout(function() {
+                    for (let card of selectedCards) {
+                        card.firstChild.classList.remove('hidden');
+                        card.children[1].classList.add('hidden');
+                        card.style.background = "black";
+                    }
+                }, 500)
             }, 1000)
             
             // When resetting, clear selectedCards and restore styling to selection result box, selected cards:
