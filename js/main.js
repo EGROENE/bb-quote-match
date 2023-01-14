@@ -276,6 +276,8 @@ for (let card of charCards) {
             card.firstChild.classList.add('hidden');
             card.children[1].classList.remove('hidden');
             card.style.background = "rgba(0, 0, 0, 0.6)";
+            card.classList.remove('animate__animate', 'animate__flipOutY');
+            card.classList.remove('animate__animate', 'animate__flipInY');
         }, 500)
         if (selectedCards.length === 2 && (selectedCards[0].dataset.name != selectedCards[1].dataset.name)) {
             // Disable clicking of all cards:
@@ -293,19 +295,16 @@ for (let card of charCards) {
                 for (let card of selectedCards) {
                     card.classList.add('animate__animate', 'animate__flipOutY');
                     card.classList.add('animate__animate', 'animate__flipInY');
-                }
-                setTimeout(function() {
-                    for (let card of selectedCards) {
-                        card.firstChild.classList.remove('hidden');
+                    setTimeout(function() {
                         card.children[1].classList.add('hidden');
+                        card.firstChild.classList.remove('hidden');
                         card.style.background = "black";
-                    }
-                }, 500)
+                    }, 500)
+                }
             }, 1000)
             
-            // When resetting, clear selectedCards and restore styling to selection result box, selected cards:
-            // only reset cards that have not been matched
             // BELOW COMMENTED-OUT CODE SHOULD BE USED IF USING A 'TRY AGAIN' BUTTON TO RESET CARDS AFTER A MISMATCH
+            // KEEP, IN CASE MIND CHANGES
             /* document.getElementById('try-again').addEventListener('click', function() {
                 /////// + "<button id='try-again'>Try again</button>"
                 for (let card of charCards) {
@@ -325,13 +324,11 @@ for (let card of charCards) {
                 for (let card of charCards) {
                     document.getElementById('selection-result').innerHTML = ""
                     document.getElementById('selection-result').style.display = 'none';
+                    card.style.pointerEvents = 'auto';
                     if (!matchedCards.includes(card)) {
                         card.classList.remove('animate__animate', 'animate__flipOutY');
                         card.classList.remove('animate__animate', 'animate__flipInY');
-                        card.firstChild.classList.remove('hidden');
-                        card.children[1].classList.add('hidden');
-                        card.style.pointerEvents = 'auto';
-                        card.style.background = "black";
+
                     }
                 }
                 selectedCards = [];
@@ -352,7 +349,7 @@ for (let card of charCards) {
                 document.getElementById('selection-result').innerHTML = ""
             }, 1700);
 
-            // Add 'matched' to each card's classlist & push to matched cards array:
+            // Disable clicking of matched cards, add .matched to matched cards, push to matchedCards array:
             for (let card of selectedCards) {
                 card.style.pointerEvents = 'none';
                 card.classList.add('matched');
@@ -361,6 +358,7 @@ for (let card of charCards) {
             }
             console.log(matchedCards.length)
             console.log(charCards.length)
+            // Clear selectedCards array for next turn:
             selectedCards = [];
             if (matchedCards.length === charCards.length) {
                 document.getElementById('game-over').classList.add('animate__animated', 'animate__fadeInUp');
