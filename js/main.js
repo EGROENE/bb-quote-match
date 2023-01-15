@@ -351,6 +351,7 @@ const playAgainBtn = document.getElementById('play-again-btn');
             // Display selection results box & add appropriate text, accounting for animation:
             setTimeout(function() {
                 selectionResultBox.style.display = 'block';
+                selectionResultBox.style.backgroundColor = 'rgb(50, 50, 50)';
                 selectionResultBox.innerHTML += "<header>Nope!</header>"
                 selectionResultBox.style.top = '18rem';
                 selectionResultBox.style.left = '34rem';
@@ -425,8 +426,12 @@ const playAgainBtn = document.getElementById('play-again-btn');
                         selectionResultBox.innerHTML += "<img src='./assets/walt-you-got-me.jpg'></img>"
                         selectionResultBox.style.top = '12rem';
                         selectionResultBox.style.left = '28rem';
+                        selectionResultBox.style.background = 'none';
                     } else {
+                        selectionResultBox.style.backgroundColor = 'rgb(50, 50, 50)';
                         selectionResultBox.innerHTML += "<header>Match!</header>"
+                        selectionResultBox.style.top = '18rem';
+                        selectionResultBox.style.left = '34rem';
                     }
                 }
             }, 1000)
