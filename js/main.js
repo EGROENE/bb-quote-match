@@ -14,7 +14,7 @@ setBG();
 const bgOneImg = 'url("./assets/bg-one.jpg")';
 ///////////////////////////////////////////////
 
-// On click of 'start' button in welcome box, hide welcome box and display #in-game-header & #card-area:
+// On click of 'start' buttons in welcome box, hide welcome box and display #in-game-header & #card-area:
 let cardsToDisplay = 0;
 const startBtns = document.getElementsByClassName('start-btn');
 for (let btn of startBtns) {
@@ -24,8 +24,9 @@ for (let btn of startBtns) {
         document.getElementById('in-game-header').style.display = 'flex';
         document.getElementById('card-area').style.display = 'grid';
 
+        // cardsToDisplay is set, based on which start btn the user selects:
+        // Later used to populate HTML
         btn.id === 'easy-btn' ? cardsToDisplay = 8 : cardsToDisplay = 16;
-        console.log(cardsToDisplay);
 
         // Get the area where cards are to be displayed:
         const cardArea = document.getElementById('card-area');
