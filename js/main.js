@@ -282,8 +282,11 @@ for (let btn of startBtns) {
         // Make array out of charCards:
         charCards = Array.from(charCards);
 
+        // Get matches tally area:
+        const matchTally = document.getElementById('match-tally');
+
         // Display initial match tally:
-        document.getElementById('match-tally').textContent += totalMatches + ' / ' + (charCards.length / 2);
+        matchTally.textContent += totalMatches + ' / ' + (charCards.length / 2);
 
         // Change cards' border color, depending on current bg:
         const changeStylingBasedOnCurrentBG = () => {
@@ -314,8 +317,6 @@ for (let btn of startBtns) {
         // ASSIGN PARTS OF DOCUMENT TO VARIABLES:
         // Assign selection result box to variable:
         const selectionResultBox = document.getElementById('selection-result');
-        // Get matches tally area:
-        const matchTally = document.getElementById('match-tally');
         // Get game-over box:
         const gameOverBox = document.getElementById('game-over');
         // Get play-again button:
