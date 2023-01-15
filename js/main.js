@@ -102,8 +102,7 @@ const marieSchraderQuotes = [
     "Chemotherapy & marijuana go together like apple pie & Chevrolet.",
     "Is Mr. Grabbyhands still there?",
     "I don't need you to be mean about it either, Mr. Grumpy.",
-    "Good. I'm staying. I'll heat up lasagna.",
-    ""
+    "Good. I'm staying. I'll heat up lasagna."
 ]
 
 const mikeEhrmantrautQuotes = [
