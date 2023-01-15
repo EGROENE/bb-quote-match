@@ -353,7 +353,7 @@ for (let btn of startBtns) {
                         }
                     }
 
-                    // Display selection results box & add appropriate text, accounting for animation:
+                    // Display selection results box & add appropriate text & styling, accounting for animation:
                     setTimeout(function() {
                         selectionResultBox.style.display = 'block';
                         selectionResultBox.style.backgroundColor = 'rgb(50, 50, 50)';
@@ -376,23 +376,6 @@ for (let btn of startBtns) {
                             }
                         }, 500);
                     }, 1500);
-                    
-                    // BELOW COMMENTED-OUT CODE SHOULD BE USED IF USING A 'TRY AGAIN' BUTTON TO RESET CARDS AFTER A MISMATCH
-                    // KEEP FOR NOW, IN CASE MIND CHANGES
-                    /* document.getElementById('try-again').addEventListener('click', function() {
-                        /////// + "<button id='try-again'>Try again</button>" - add this part to innerHTML of selectionResultBox after 'Nope!'
-                        for (let card of charCards) {
-                            document.getElementById('selection-result').innerHTML = ""
-                            document.getElementById('selection-result').style.display = 'none';
-                            if (!matchedCards.includes(card)) {
-                                card.firstChild.classList.remove('hidden');
-                                card.children[1].classList.add('hidden');
-                                card.style.pointerEvents = 'auto';
-                                card.style.background = "black";
-                            }
-                        }
-                        selectedCards = [];
-                    }) */
 
                     // BELOW FUNC IS TO AUTOMATICALLY RESET CARDS AFTER A MISMATCH AFTER A CERTAIN PERIOD OF TIME
                     setTimeout(function() {
