@@ -246,7 +246,7 @@ let totalMatches = 0;
 // Function to display cards containing each char's image and name:
 // Add data-name to each info card:
 function displayCharsNameImage() {
-    for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
+    for (let i = 0; i < allChars.length - (allChars.length - 2); i++) {
         cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
         + "<div class='info-container hidden'>"
@@ -263,7 +263,7 @@ displayCharsNameImage();
 // Function to display cards containing each char's quote:
 // Add data-name to each quote card:
 function displayCharsQuote() {
-    for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
+    for (let i = 0; i < allChars.length - (allChars.length - 2); i++) {
     //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
@@ -438,6 +438,14 @@ const playAgainBtn = document.getElementById('play-again-btn');
             // Reset selectedCards array for next turn:
             selectedCards = [];
             if (matchedCards.length === charCards.length) {
+                let endingGifContainer = document.getElementById('ending-gif-container');
+                const endingGifs = [
+                    "./assets/saul-thumbs-up.gif",
+                    "./assets/jesse-dancing.gif",
+                    "./assets/walt-its-over.gif"
+                ]
+                let randNum = Math.floor(Math.random() * endingGifs.length);
+                endingGifContainer.innerHTML += "<img src='" + endingGifs[randNum] + "'>"
                 gameOverBox.classList.add('animate__animated', 'animate__fadeInUp');
                 gameOverBox.style.display = 'flex';
                 playAgainBtn.addEventListener('click', function() {
