@@ -64,6 +64,13 @@ const hankSchraderQuotes = [
     'Sometimes, the forbidden fruit tastes the sweetest.'
 ]
 
+const lydiaRodarteQuayleQuotes = [
+    "Who said anything about barrels? I'm talking about oceans of the stuff.",
+    "I can grow your business exponentially.",
+    "Where's the blue? The blue color? Does it come later?",
+    "Please do make the cook better. It's very important."
+]
+
 const janeMargolisQuotes = [
     'Why should we do anything more than once? Should I just smoke this one cigarette? Maybe we should only have sex once if it\'s the same thing? Should we just watch one sunset? Or live just one day? Because it\'s new every time. Each time is a new experience.',
     'Do right by Jesse tonight, or I will burn you to the ground.',
@@ -200,6 +207,7 @@ const allChars = [
     { name: 'Hank Schrader', imageURL: './assets/hank-schrader.jpg', quote: getRandQuote(hankSchraderQuotes) },
     { name: 'Jane Margolis', imageURL: './assets/jane-margolis.jpg', quote: getRandQuote(janeMargolisQuotes) },
     { name: 'Jesse Pinkman', imageURL: './assets/jesse-pinkman.jpg', quote: getRandQuote(jessePinkmanQuotes) },
+    { name: 'Lydia Rodarte-Quayle', imageURL: './assets/lydia-rodarte-quayle.jpg', quote: getRandQuote(lydiaRodarteQuayleQuotes) },
     { name: 'Marie Schrader', imageURL: './assets/marie-schrader.jpg', quote: getRandQuote(marieSchraderQuotes) },
     { name: 'Mike Ehrmantraut', imageURL: './assets/mike-ehrmantraut.jpg', quote: getRandQuote(mikeEhrmantrautQuotes) },
     { name: 'Saul Goodman', imageURL: './assets/saul-goodman.jpg', quote: getRandQuote(saulGoodmanQuotes) },
