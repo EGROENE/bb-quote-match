@@ -209,7 +209,7 @@ const allChars = [
     { name: 'Hank Schrader', imageURL: './assets/hank-schrader.jpg', quote: getRandQuote(hankSchraderQuotes) },
     { name: 'Jane Margolis', imageURL: './assets/jane-margolis.jpg', quote: getRandQuote(janeMargolisQuotes) },
     { name: 'Jesse Pinkman', imageURL: './assets/jesse-pinkman.jpg', quote: getRandQuote(jessePinkmanQuotes) },
-    { name: 'Lydia Rodarte-Quayle', imageURL: './assets/lydia-rodarte-quayle.jpg', quote: getRandQuote(lydiaRodarteQuayleQuotes) },
+    { name: 'Lydia Quayle', imageURL: './assets/lydia-rodarte-quayle.jpg', quote: getRandQuote(lydiaRodarteQuayleQuotes) },
     { name: 'Marie Schrader', imageURL: './assets/marie-schrader.jpg', quote: getRandQuote(marieSchraderQuotes) },
     { name: 'Mike Ehrmantraut', imageURL: './assets/mike-ehrmantraut.jpg', quote: getRandQuote(mikeEhrmantrautQuotes) },
     { name: 'Saul Goodman', imageURL: './assets/saul-goodman.jpg', quote: getRandQuote(saulGoodmanQuotes) },
