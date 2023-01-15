@@ -15,13 +15,15 @@ const bgOneImg = 'url("./assets/bg-one.jpg")';
 ///////////////////////////////////////////////
 
 // On click of 'start' button in welcome box, hide welcome box and display #in-game-header & #card-area:
-const startBtn = document.getElementById('start-btn');
-startBtn.addEventListener('click', function() {
-    document.getElementsByTagName('main')[0].style.height = '100%';
-    document.getElementById('welcome-box').style.display = 'none';
-    document.getElementById('in-game-header').style.display = 'flex';
-    document.getElementById('card-area').style.display = 'grid';
-})
+const startBtns = document.getElementsByClassName('start-btn');
+for (let btn of startBtns) {
+    btn.addEventListener('click', function() {
+        document.getElementsByTagName('main')[0].style.height = '100%';
+        document.getElementById('welcome-box').style.display = 'none';
+        document.getElementById('in-game-header').style.display = 'flex';
+        document.getElementById('card-area').style.display = 'grid';
+    })
+}
 
 // Get the area where cards are to be displayed:
 const cardArea = document.getElementById('card-area');
