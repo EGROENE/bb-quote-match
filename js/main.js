@@ -79,6 +79,18 @@ const jessePinkmanQuotes = [
     'So roll me further, bitch.'
 ]
 
+const marieSchraderQuotes = [
+    'Pain is weakness leaving your body.',
+    'Hey, if you can get your leg up that high, go for it.',
+    "It's over. 'Dead to right', I believe is the expression.",
+    "It was before they tightened the stalking laws.",
+    "Chemotherapy & marijuana go together like apple pie & Chevrolet.",
+    "Is Mr. Grabbyhands still there?",
+    "I don't need you to be mean about it either, Mr. Grumpy.",
+    "Good. I'm staying. I'll heat up lasagna.",
+    ""
+]
+
 const mikeEhrmantrautQuotes = [
     'Just because you shot Jesse James, don\'t make you Jesse James.',
     'I assure you that I can kill you from way over here if it makes you feel any better.',
@@ -171,6 +183,7 @@ const allChars = [
     { name: 'Hank Schrader', imageURL: './assets/hank-schrader.jpg', quote: getRandQuote(hankSchraderQuotes) },
     { name: 'Jane Margolis', imageURL: './assets/jane-margolis.jpg', quote: getRandQuote(janeMargolisQuotes) },
     { name: 'Jesse Pinkman', imageURL: './assets/jesse-pinkman.jpg', quote: getRandQuote(jessePinkmanQuotes) },
+    { name: 'Marie Schrader', imageURL: './assets/marie-schrader.jpg', quote: getRandQuote(marieSchraderQuotes) },
     { name: 'Mike Ehrmantraut', imageURL: './assets/mike-ehrmantraut.jpg', quote: getRandQuote(mikeEhrmantrautQuotes) },
     { name: 'Saul Goodman', imageURL: './assets/saul-goodman.jpg', quote: getRandQuote(saulGoodmanQuotes) },
     { name: 'Skinny Pete', imageURL: './assets/skinny-pete.jpg', quote: getRandQuote(skinnyPeteQuotes) },
