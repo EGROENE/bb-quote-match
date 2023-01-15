@@ -38,6 +38,12 @@ const badgerQuotes = [
     'You are a genius, bro. This kankenstein is unreal.'
 ]
 
+const galeBoetticherQuotes = [
+    "There's crime & then there's crime. I'm definitely a libertarian.",
+    "I doff my proverbial cap to you, Sir!",
+    "Consenting adults want what they want, and if I'm not supplying it, they will get it somewhere else. At least with me, they're getting exactly what they pay for."
+]
+
 const gusFringQuotes = [
     'You are a wealthy man now. One must learn to be rich. To be poor, anyone can manage.',
     'I investigate everyone with whom I do business. What careful man wouldn\'t?',
@@ -189,6 +195,7 @@ const getRandQuote = (array) => {
 // Array containing all info on all chars, each in its own object:
 const allChars = [
     { name: 'Badger', imageURL: './assets/badger.jpg', quote: getRandQuote(badgerQuotes) },
+    { name: 'Gale Boetticher', imageURL: './assets/gale-boetticher.jpg', quote: getRandQuote(galeBoetticherQuotes) },
     { name: 'Gus Fring', imageURL: './assets/gus-fring.jpg', quote: getRandQuote(gusFringQuotes) },
     { name: 'Hank Schrader', imageURL: './assets/hank-schrader.jpg', quote: getRandQuote(hankSchraderQuotes) },
     { name: 'Jane Margolis', imageURL: './assets/jane-margolis.jpg', quote: getRandQuote(janeMargolisQuotes) },
