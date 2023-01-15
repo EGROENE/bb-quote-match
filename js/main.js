@@ -246,7 +246,7 @@ let totalMatches = 0;
 // Function to display cards containing each char's image and name:
 // Add data-name to each info card:
 function displayCharsNameImage() {
-    for (let i = 0; i < allChars.length - (allChars.length - 2); i++) {
+    for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
         cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
         + "<div class='info-container hidden'>"
@@ -263,7 +263,7 @@ displayCharsNameImage();
 // Function to display cards containing each char's quote:
 // Add data-name to each quote card:
 function displayCharsQuote() {
-    for (let i = 0; i < allChars.length - (allChars.length - 2); i++) {
+    for (let i = 0; i < allChars.length - (allChars.length - 8); i++) {
     //for (let i = 1; i < 2; i++) {
         cardArea.innerHTML += "<div class='char-card quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
         + "<div class='card-back'></div>"
@@ -352,6 +352,8 @@ const playAgainBtn = document.getElementById('play-again-btn');
             setTimeout(function() {
                 selectionResultBox.style.display = 'block';
                 selectionResultBox.innerHTML += "<header>Nope!</header>"
+                selectionResultBox.style.top = '18rem';
+                selectionResultBox.style.left = '34rem';
 
                 // Animate selected cards when they are flipped back over:
                 for (let card of selectedCards) {
@@ -419,7 +421,13 @@ const playAgainBtn = document.getElementById('play-again-btn');
                 // If the match isn't the final one of the game, display 'Match!':
                 if (matchedCards.length != charCards.length) {
                     selectionResultBox.style.display = 'block';
-                    selectionResultBox.innerHTML += "<header>Match!</header>"
+                    if (card.dataset.name === 'walter-white') {
+                        selectionResultBox.innerHTML += "<img src='./assets/walt-you-got-me.jpg'></img>"
+                        selectionResultBox.style.top = '12rem';
+                        selectionResultBox.style.left = '28rem';
+                    } else {
+                        selectionResultBox.innerHTML += "<header>Match!</header>"
+                    }
                 }
             }, 1000)
 
