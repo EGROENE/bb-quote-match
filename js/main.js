@@ -131,6 +131,16 @@ const skylerWhiteQuotes = [
     'If I have to hear one more time that you did this for the family...'
 ]
 
+const toddAlquistQuotes = [
+    "At the end of the day, it was him or us, & I chose us. And I would do it again.",
+    "No matter how much you got, how do you turn your back on more?",
+    "Jesus, Mr. White...",
+    "Just so you know, this isn't personal.",
+    "We'll talk money once I get this right.",
+    "You really shouldn't have come back, Mr. White.",
+    "You didn't tell me this smells like cat piss."
+]
+
 const tucoSalamancaQuotes = [
     'This kicks like a mule with its balls wrapped in duct tape!',
     'I like doing business with a family man. There\'s always a lot of collateral.',
@@ -188,6 +198,7 @@ const allChars = [
     { name: 'Saul Goodman', imageURL: './assets/saul-goodman.jpg', quote: getRandQuote(saulGoodmanQuotes) },
     { name: 'Skinny Pete', imageURL: './assets/skinny-pete.jpg', quote: getRandQuote(skinnyPeteQuotes) },
     { name: 'Skyler White', imageURL: './assets/skyler-white.jpg', quote: getRandQuote(skylerWhiteQuotes) },
+    { name: 'Todd Alquist', imageURL: './assets/todd-alquist.jpg', quote: getRandQuote(toddAlquistQuotes) },
     { name: 'Tuco Salamanca', imageURL: './assets/tuco-salamanca.jpg', quote: getRandQuote(tucoSalamancaQuotes) },
     { name: 'Walter White jr', imageURL: './assets/walter-white-jr.jpg', quote: getRandQuote(waltJrQuotes) },
     { name: 'Walter White', imageURL: './assets/walter-white.jpg', quote: getRandQuote(walterWhiteQuotes) },
