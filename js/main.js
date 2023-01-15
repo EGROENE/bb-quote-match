@@ -76,6 +76,8 @@ const janeMargolisQuotes = [
     'Do right by Jesse tonight, or I will burn you to the ground.',
     'I\'ve gone where the Universe takes me my whole life. It\'s better to make those decisions yourself.',
     'Wow, that was so sweet. I think I threw up in my mouth a little.',
+    "Yo, my dad's not really a make-exceptions kinda guy, trust me.",
+    "I know guys that will have your skinny ass out back by the dumpster faster than you can blink."
 ]
 
 const jessePinkmanQuotes = [
