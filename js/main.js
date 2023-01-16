@@ -260,7 +260,8 @@ for (let btn of startBtns) {
         // Function to display cards containing each char's image and name:
         // Add data-name to each info card:
         function displayCharsNameImage() {
-            for (let i = 0; i < allChars.length - (allChars.length - cardsToDisplay); i++) {
+            //for (let i = 0; i < allChars.length - (allChars.length - cardsToDisplay); i++) {
+            for (let i = 0; i < allChars.length - (allChars.length - 2); i++) {
                 cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
                 + "<div class='card-back'></div>"
                 + "<div class='info-container hidden'>"
@@ -277,8 +278,8 @@ for (let btn of startBtns) {
         // Function to display cards containing each char's quote:
         // Add data-name to each quote card:
         function displayCharsQuote() {
-            for (let i = 0; i < allChars.length - (allChars.length - cardsToDisplay); i++) {
-            //for (let i = 1; i < 2; i++) {
+            //for (let i = 0; i < allChars.length - (allChars.length - cardsToDisplay); i++) {
+            for (let i = 0; i < allChars.length - (allChars.length - 2); i++) {
                 cardArea.innerHTML += "<div class='char-card quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
                 + "<div class='card-back'></div>"
                 + "<p class='hidden'>" + allChars[i].quote + "</p>"
@@ -365,13 +366,10 @@ for (let btn of startBtns) {
 
                     // Display selection results box & add appropriate text & styling, accounting for animation:
                     setTimeout(function() {
-                        selectionResultBox.style.display = 'block';
+                        selectionResultBox.style.display = 'inline-flex';
                         selectionResultBox.style.backgroundColor = 'rgb(50, 50, 50)';
                         selectionResultBox.innerHTML += "<header>Nope!</header>"
-                        /* selectionResultBox.style.top = '18rem';
-                        selectionResultBox.style.left = '34rem'; */
                         selectionResultBox.style.top = '50vh';
-                        selectionResultBox.style.left = '40vw';
 
                         // Animate selected cards when they are flipped back over:
                         for (let card of selectedCards) {
@@ -403,14 +401,12 @@ for (let btn of startBtns) {
                                 // Remove flip animations so they can be added again when clicked again:
                                 card.classList.remove('animate__animate', 'animate__flipOutY');
                                 card.classList.remove('animate__animate', 'animate__flipInY');
-                                //card.firstChild.classList.remove('hidden');
-                                //card.children[1].classList.add('hidden');
                                 card.style.pointerEvents = 'auto';
                                 card.style.background = "black";
                             }
                         }
                         selectedCards = [];
-                    }, 2750)
+                    }, 275000)
                 // If 2 cards are selected and they match...    
                 } else if (selectedCards.length === 2 && (selectedCards[0].dataset.name === selectedCards[1].dataset.name)) {
                     setTimeout(function() {
@@ -424,16 +420,12 @@ for (let btn of startBtns) {
                             selectionResultBox.style.display = 'block';
                             if (card.dataset.name === 'walter-white') {
                                 selectionResultBox.innerHTML += "<img src='./assets/walt-you-got-me.jpg'></img>"
-                                selectionResultBox.style.top = '12rem';
-                                selectionResultBox.style.left = '28rem';
+                                selectionResultBox.style.top = '45vh';
                                 selectionResultBox.style.background = 'none';
                             } else {
                                 selectionResultBox.style.backgroundColor = 'rgb(50, 50, 50)';
                                 selectionResultBox.innerHTML += "<header>Match!</header>"
-                               /*  selectionResultBox.style.top = '18rem';
-                                selectionResultBox.style.left = '34rem'; */
-                                selectionResultBox.style.top = '45vh';
-                                selectionResultBox.style.left = '38vw';
+                                selectionResultBox.style.top = '50vh';
                             }
                         }
                     }, 1000)
@@ -442,7 +434,7 @@ for (let btn of startBtns) {
                     setTimeout(function() {
                         selectionResultBox.style.display = 'none';
                         selectionResultBox.innerHTML = ""
-                    }, 1700);
+                    }, 170000);
 
                     // Disable current cards matched add 'matched' to each card's classlist & push to matched cards array:
                     for (let card of selectedCards) {
