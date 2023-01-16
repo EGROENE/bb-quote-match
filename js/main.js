@@ -37,11 +37,8 @@ for (let btn of startBtns) {
         // Add one second to timer every 1000 ms:
         timerFunctionality = setInterval(function() {
             timeUnit++;
-            console.log(timeUnit)
             let mins = Math.floor(timeUnit / 60);
-            console.log(mins)
             let secs = timeUnit - (mins * 60);
-            console.log(secs)
             secs < 10 ? timer.textContent = mins + ':' + '0' + secs : timer.textContent = mins + ':' + secs;
         }, 1000);
 
