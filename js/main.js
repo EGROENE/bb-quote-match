@@ -368,8 +368,10 @@ for (let btn of startBtns) {
                         selectionResultBox.style.display = 'block';
                         selectionResultBox.style.backgroundColor = 'rgb(50, 50, 50)';
                         selectionResultBox.innerHTML += "<header>Nope!</header>"
-                        selectionResultBox.style.top = '18rem';
-                        selectionResultBox.style.left = '34rem';
+                        /* selectionResultBox.style.top = '18rem';
+                        selectionResultBox.style.left = '34rem'; */
+                        selectionResultBox.style.top = '50vh';
+                        selectionResultBox.style.left = '40vw';
 
                         // Animate selected cards when they are flipped back over:
                         for (let card of selectedCards) {
@@ -428,8 +430,10 @@ for (let btn of startBtns) {
                             } else {
                                 selectionResultBox.style.backgroundColor = 'rgb(50, 50, 50)';
                                 selectionResultBox.innerHTML += "<header>Match!</header>"
-                                selectionResultBox.style.top = '18rem';
-                                selectionResultBox.style.left = '34rem';
+                               /*  selectionResultBox.style.top = '18rem';
+                                selectionResultBox.style.left = '34rem'; */
+                                selectionResultBox.style.top = '45vh';
+                                selectionResultBox.style.left = '38vw';
                             }
                         }
                     }, 1000)
