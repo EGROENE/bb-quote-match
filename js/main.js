@@ -28,6 +28,23 @@ for (let btn of startBtns) {
         // Later used to populate HTML
         btn.id === 'easy-btn' ? cardsToDisplay = 8 : cardsToDisplay = 16;
 
+        // Functionality to display elapsed time in in-game header:
+        const timer = document.getElementById('timer');
+        let timeUnit = 0;
+        /* let displayedSecs = timer.textContent[timer.textContent.length - 1];
+        let colon = ':';
+        let displayedMins = timer.textContent[timer.textContent.length - 4]; */
+        // Add one second to timer every 1000 ms:
+        timerFunctionality = setInterval(function() {
+            timeUnit++;
+            console.log(timeUnit)
+            let mins = Math.floor(timeUnit / 60);
+            console.log(mins)
+            let secs = timeUnit - (mins * 60);
+            console.log(secs)
+            secs < 10 ? timer.textContent = mins + ':' + '0' + secs : timer.textContent = mins + ':' + secs;
+        }, 1000);
+
         // Get the area where cards are to be displayed:
         const cardArea = document.getElementById('card-area');
 
@@ -438,7 +455,11 @@ for (let btn of startBtns) {
                     }
                     // Reset selectedCards array for next turn:
                     selectedCards = [];
+                    // If match is final match...
                     if (matchedCards.length === charCards.length) {
+                        // Stop timer:
+                        clearInterval(timerFunctionality)
+                        // Style & display random gif from array below:
                         let endingGifContainer = document.getElementById('ending-gif-container');
                         const endingGifs = [
                             "./assets/saul-thumbs-up.gif",
@@ -447,8 +468,10 @@ for (let btn of startBtns) {
                         ]
                         let randNum = Math.floor(Math.random() * endingGifs.length);
                         endingGifContainer.innerHTML += "<img src='" + endingGifs[randNum] + "'>"
+                        // Animate, display game over box:
                         gameOverBox.classList.add('animate__animated', 'animate__fadeInUp');
                         gameOverBox.style.display = 'flex';
+                        // Add EL to play again button that will reset game on click:
                         playAgainBtn.addEventListener('click', function() {
                             window.location.reload();
                         })
