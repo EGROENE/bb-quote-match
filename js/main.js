@@ -31,10 +31,6 @@ for (let btn of startBtns) {
         // Functionality to display elapsed time in in-game header:
         const timer = document.getElementById('timer');
         let timeUnit = 0;
-        /* let displayedSecs = timer.textContent[timer.textContent.length - 1];
-        let colon = ':';
-        let displayedMins = timer.textContent[timer.textContent.length - 4]; */
-        // Add one second to timer every 1000 ms:
         timerFunctionality = setInterval(function() {
             timeUnit++;
             let mins = Math.floor(timeUnit / 60);
