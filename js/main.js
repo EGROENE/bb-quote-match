@@ -10,6 +10,17 @@ const setBG = () => {
 }
 setBG();
 
+document.getElementsByTagName(body).style.height = '100vh';
+
+/* let bg = $("#bg1, #bg2");
+
+function resizeBackground() {
+    bg.height($(window).height() + 60);
+}
+
+$(window).resize(resizeBackground);
+resizeBackground(); */
+
 // Assign bg one to variable:
 const bgOneImg = 'url("./assets/bg-one.jpg")';
 ///////////////////////////////////////////////
