@@ -257,7 +257,7 @@ for (let btn of startBtns) {
         // Function to display cards containing each char's image and name:
         // Add data-name to each info card:
         function displayCharsNameImage() {
-            for (let i = 0; i < allChars.length - (allChars.length - cardsToDisplay); i++) {
+            for (let i = 0; i < cardsToDisplay; i++) {
                 cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
                 + "<div class='card-back'></div>"
                 + "<div class='info-container hidden'>"
@@ -274,7 +274,7 @@ for (let btn of startBtns) {
         // Function to display cards containing each char's quote:
         // Add data-name to each quote card:
         function displayCharsQuote() {
-            for (let i = 0; i < allChars.length - (allChars.length - cardsToDisplay); i++) {
+            for (let i = 0; i < cardsToDisplay; i++) {
                 cardArea.innerHTML += "<div class='char-card quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
                 + "<div class='card-back'></div>"
                 + "<p class='hidden'>" + allChars[i].quote + "</p>"
