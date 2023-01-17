@@ -412,9 +412,9 @@ for (let btn of startBtns) {
                         totalMatches += 1;
                         // Update and display the new matches tally:
                         matchTally.textContent = totalMatches + ' / ' + (charCards.length / 2);
-                        // Display selection result box:
                         // If the match isn't the final one of the game, display 'Match!':
                         if (matchedCards.length != charCards.length) {
+                            // Display selection result box:
                             selectionResultBox.style.display = 'block';
                             if (card.dataset.name === 'walter-white') {
                                 selectionResultBox.innerHTML += "<img src='./assets/walt-you-got-me.jpg'></img>"
