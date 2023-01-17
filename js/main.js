@@ -432,7 +432,7 @@ for (let btn of startBtns) {
                     setTimeout(function() {
                         selectionResultBox.style.display = 'none';
                         selectionResultBox.innerHTML = ""
-                    }, 1700);
+                    }, 2000);
 
                     // Disable current cards matched add 'matched' to each card's classlist & push to matched cards array:
                     for (let card of selectedCards) {
