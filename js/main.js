@@ -10,8 +10,8 @@ const setBG = () => {
 }
 setBG();
 
-const body = document.getElementsByTagName(body);
-for (let item of body) {
+const pageBody = document.getElementsByTagName(body);
+for (let item of pageBody) {
     item.style.height = '100vh';
 }
 /* let bg = $("#bg1, #bg2");
