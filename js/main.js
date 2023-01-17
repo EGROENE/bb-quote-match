@@ -9,21 +9,6 @@ const setBG = () => {
     document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
 }
 setBG();
-
-const pageBody = document.getElementsByTagName('body');
-for (let item of pageBody) {
-    item.style.height = '120vh';
-}
-/* let bg = $("#bg1, #bg2");
-
-function resizeBackground() {
-    bg.height($(window).height() + 60);
-}
-
-$(window).resize(resizeBackground);
-resizeBackground(); */
-
-// Assign bg one to variable:
 const bgOneImg = 'url("./assets/bg-one.jpg")';
 ///////////////////////////////////////////////
 
