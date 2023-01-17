@@ -12,7 +12,7 @@ setBG();
 
 const pageBody = document.getElementsByTagName('body');
 for (let item of pageBody) {
-    item.style.height = '100vh';
+    item.style.height = '120vh';
 }
 /* let bg = $("#bg1, #bg2");
 
