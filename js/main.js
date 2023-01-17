@@ -205,8 +205,7 @@ for (let btn of startBtns) {
             "I did it for me. I liked it. I was good at it. And, I was really…I was alive.",
             "Jesse, you asked me if I was in the meth business, or the money business… Neither. I'm in the empire business.",
             "We tried to poison you. We tried to poison you because you're an insane, degenerate piece of filth, and you deserve to die.",
-            "Stay out of my territory.",
-            "Jesse, you asked me if I was in the meth business, or the money business… Neither. I'm in the empire business."
+            "Stay out of my territory."
         ]
 
         // Function to return random quote from any char quote array:
