@@ -19,15 +19,7 @@
 /* Declare Breaking Bad font: */
 @font-face { font-family: BBfont; src: url('../assets/bb-font.otf'); }
 
-html {
-    overflow: hidden;
-}
-
 body {
-    height: 100%;
-    position: fixed;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
