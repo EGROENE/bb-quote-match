@@ -260,8 +260,7 @@ for (let btn of startBtns) {
         // Function to display cards containing each char's image and name:
         // Add data-name to each info card:
         function displayCharsNameImage() {
-            //for (let i = 0; i < allChars.length - (allChars.length - cardsToDisplay); i++) {
-            for (let i = 0; i < allChars.length - (allChars.length - 2); i++) {
+            for (let i = 0; i < allChars.length - (allChars.length - cardsToDisplay); i++) {
                 cardArea.innerHTML += "<div class='char-card info-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
                 + "<div class='card-back'></div>"
                 + "<div class='info-container hidden'>"
@@ -278,8 +277,7 @@ for (let btn of startBtns) {
         // Function to display cards containing each char's quote:
         // Add data-name to each quote card:
         function displayCharsQuote() {
-            //for (let i = 0; i < allChars.length - (allChars.length - cardsToDisplay); i++) {
-            for (let i = 0; i < allChars.length - (allChars.length - 2); i++) {
+            for (let i = 0; i < allChars.length - (allChars.length - cardsToDisplay); i++) {
                 cardArea.innerHTML += "<div class='char-card quote-card' data-name='" + allChars[i].name.toLowerCase().replace(/ /g, '-') + "'>"
                 + "<div class='card-back'></div>"
                 + "<p class='hidden'>" + allChars[i].quote + "</p>"
@@ -406,7 +404,7 @@ for (let btn of startBtns) {
                             }
                         }
                         selectedCards = [];
-                    }, 275000)
+                    }, 2750)
                 // If 2 cards are selected and they match...    
                 } else if (selectedCards.length === 2 && (selectedCards[0].dataset.name === selectedCards[1].dataset.name)) {
                     setTimeout(function() {
@@ -434,7 +432,7 @@ for (let btn of startBtns) {
                     setTimeout(function() {
                         selectionResultBox.style.display = 'none';
                         selectionResultBox.innerHTML = ""
-                    }, 170000);
+                    }, 1700);
 
                     // Disable current cards matched add 'matched' to each card's classlist & push to matched cards array:
                     for (let card of selectedCards) {
