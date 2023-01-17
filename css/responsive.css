@@ -1,0 +1,272 @@
+@media screen and (min-width: 1920px) {
+    #welcome-box {
+        padding: 7rem;
+        line-height: 5rem;
+    }
+
+    #in-game-header {
+        font-size: 4rem;
+    }
+
+    #match-tally-container p, 
+    #elapsed-time-container p {
+        font-size: var(--size-42);
+    }
+
+    .img-container img {
+        height: 20rem;
+    }
+
+    .info-card p {
+        font-size: var(--size-48);
+    }
+
+    .quote-card p {
+        font-size: var(--size-24);
+        line-height: var(--size-32);
+    }
+
+    #ending-gif-container img {
+        height: 19rem;
+    }
+
+    #game-over header {
+        font-size: var(--size-40);
+    }
+
+    #game-over p {
+        font-size: var(--size-24);
+    }
+
+    #welcome-box button, #game-over button {
+        padding: var(--size-20);
+        font-size: var(--size-32);
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .img-container img {
+        height: 17rem;
+    }
+
+    .info-card p {
+        font-size: var(--size-32);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #welcome-box {
+        line-height: 5rem;
+    }
+
+    #game-over div {
+        line-height: 5rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #game-over div {
+        line-height: 5rem;
+    }
+}
+
+@media screen and (max-width: 962px) {
+    #welcome-box {
+        width: 73%;
+    }
+
+    .img-container img {
+        height: 9rem;
+    }
+
+    .info-card p {
+        font-size: var(--size-20);
+    }
+
+    .quote-card p {
+        font-size: var(--size-12);
+    }
+
+    #selection-result {
+        padding: 1rem;
+    }
+
+    #selection-result header {
+        font-size: 3rem;
+    }
+
+    #game-over {
+        width: 60%;
+        top: 6rem;
+        padding: 5rem;
+    }
+
+    #game-over div {
+        line-height: 3rem;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    #welcome-box {
+        line-height: 5rem;
+    }
+
+    #in-game-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #ig-header-elems {
+        margin-top: var(--size-20);
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    #card-area {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: var(--size-32);
+    }
+
+    .img-container img {
+        height: 10rem;
+    }
+
+    .quote-card {
+        padding: 8px;
+    }
+
+    #selection-result header {
+        font-size: 5rem;
+    }
+
+    .info-card p {
+        font-size: var(--size-24);
+        letter-spacing: 2px;
+    }
+
+    #game-over {
+        top: 15rem;
+    }
+
+    #game-over button {
+        width: 44%;
+        padding: var(--size-20);
+        font-size: var(--size-28);
+    }
+}
+
+@media screen and (max-width: 601px) {
+    #match-tally-container p, 
+    #elapsed-time-container p {
+        font-size: var(--size-20);
+    }
+
+    #in-game-header header {
+        font-size: var(--size-28);
+    }
+
+    #card-area {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--size-16);
+    }
+
+    .img-container {
+        margin-bottom: var(--size-4);
+    }
+
+    .img-container img {
+        height: 13rem;
+    }
+
+    .info-card p {
+        font-size: var(--size-28);
+    }
+
+    .quote-card {
+        padding: var(--size-4);
+    }
+
+    .quote-card p {
+        font-size: var(--size-16);
+    }
+
+    #game-over {
+        top: 11rem;
+        padding: 2rem;
+    }
+
+    #game-over button {
+        font-size: var(--size-20);
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #welcome-box {
+        line-height: 3rem;
+    }
+
+    #easy-btn {
+        margin-bottom: 2rem;
+    }
+
+    .img-container img {
+        height: 8rem;
+    }
+
+    .info-container p {
+        font-size: var(--size-24);
+    }
+
+    .info-card p {
+        font-size: var(--size-20);
+    }
+
+    .quote-card p {
+        font-size: 10px;
+        line-height: var(--size-20);
+    }
+
+    #selection-result header {
+        font-size: 3rem;
+    }
+
+    #game-over div {
+        line-height: var(--size-28);
+    }
+
+    #ending-gif-container img {
+        height: 9rem;
+    }
+
+    #game-over header {
+        line-height: var(--size-36);
+    }
+
+    #game-over button {
+        width: 72%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #welcome-box button, 
+    #game-over button {
+        font-size: var(--size-20);
+    }
+
+    .img-container img {
+        height: 7rem;
+    }
+
+    .quote-card p {
+        font-size: var(--size-8);
+    }
+
+    #ending-gif-container img {
+        height: 6rem;
+    }
+
+    #game-over button {
+        padding: var(--size-12);
+    }
+}
