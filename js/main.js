@@ -195,7 +195,7 @@ for (let btn of startBtns) {
             "I won.",
             "If you believe that there's a Hell, we're pretty much already going there.",
             "Well, technically, chemistry is the study of matter. But I prefer to see it as the study of change.",
-            "You clearly don't know who you're talking to, so let me clue you in. I am not in danger, Skyler. I am the danger. A guy opens his door and gets shot, and you think that of me? No! I am the one who knocks!",
+            "I am the one who knocks!",
             "Right now, what I need, is for you to climb down out of my ass. Can you do that? Will you do that for me honey? Will you please, just once, get off my ass? You know? I'd appreciate it. I really would.",
             "Smoking marijuana, eating Cheetos, and masturbating do not constitute plans in my book.",
             "Fuck you and your eyebrows.",
