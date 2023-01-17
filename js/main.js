@@ -10,8 +10,10 @@ const setBG = () => {
 }
 setBG();
 
-document.getElementsByTagName(body).style.height = '100vh';
-
+const body = document.getElementsByTagName(body);
+for (let item of body) {
+    item.style.height = '100vh';
+}
 /* let bg = $("#bg1, #bg2");
 
 function resizeBackground() {
