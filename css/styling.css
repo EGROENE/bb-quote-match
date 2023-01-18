@@ -23,8 +23,8 @@ body {
     background-size: cover;
 /*     background-attachment: fixed;
  */    background-position: center;
-    background-size: 100vh, 100vw;
-    background-attachment: scroll;
+/*     background-size: 100vh, 100vw;
+ */    background-attachment: scroll;
     font-family: monospace;
 }
 
