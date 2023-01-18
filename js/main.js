@@ -13,8 +13,9 @@ if (screen.width <= 414) {
 const bgTwoImg = 'url("./assets/bg-two.jpg")';
 const bgFourImg = 'url("./assets/bg-four.jpg")';
 
+const buttons = document.getElementsByTagName('button');
 const startBtns = document.getElementsByClassName('start-btn');
-for (let btn of startBtns) {
+for (let btn of buttons) {
     document.body.style.backgroundImage === bgFourImg ? btn.style.backgroundColor = 'var(--bb-blue)' : btn.style.backgroundColor = 'var(--bb-green)';
 }
 ///////////////////////////////////////////////
