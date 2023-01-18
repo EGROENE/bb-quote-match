@@ -1,30 +1,16 @@
 // FUNCTIONALITY TO CHANGE PAGE BACKGROUND IMAGE:
 let backgrounds = '';
 if (screen.width <= 414) {
-    console.log('hi')
     backgrounds = [
-        './assets/bg-two.jpg',
-        './assets/bg-three.png'
-    ]
-    console.log(backgrounds)
+        './assets/bg-two.jpg', './assets/bg-three.png'];
     let randNum = Math.floor(Math.random() * backgrounds.length);
     document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
 } else {
-    backgrounds = [
-        './assets/bg-one.jpg',
-        './assets/bg-two.jpg'
-    ]
-    console.log(backgrounds)
+    backgrounds = ['./assets/bg-one.jpg', './assets/bg-two.jpg', './assets/bg-three.png'];
     let randNum = Math.floor(Math.random() * backgrounds.length);
     document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
 }
-
-/* const setBG = () => {
-    let randNum = Math.floor(Math.random() * backgrounds.length);
-    document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
-}
-setBG(); */
-const bgOneImg = 'url("./assets/bg-one.jpg")';
+const bgTwoImg = 'url("./assets/bg-two.jpg")';
 ///////////////////////////////////////////////
 
 // On click of 'start' buttons in welcome box, hide welcome box and display #in-game-header & #card-area:
@@ -311,14 +297,14 @@ for (let btn of startBtns) {
 
         // Change cards' border color, depending on current bg:
         const changeStylingBasedOnCurrentBG = () => {
-            if (document.body.style.backgroundImage === bgOneImg) {
-                inGameHeader.style.backgroundColor = 'darkred';
-                inGameHeader.style.color = 'white';
+            if (document.body.style.backgroundImage === bgTwoImg) {
+                inGameHeader.style.backgroundColor = 'var(--bb-green)';
             } else {
-                inGameHeader.style.backgroundColor = 'var(--bb-green)';        
+                inGameHeader.style.backgroundColor = 'darkred';   
+                inGameHeader.style.color = 'white';     
             }
             for (let card of charCards) {
-                document.body.style.backgroundImage === bgOneImg ? card.style.borderColor = 'darkred' : card.style.borderColor = 'var(--bb-green)'
+                document.body.style.backgroundImage === bgTwoImg ? card.style.borderColor = 'var(--bb-green)' : card.style.borderColor = 'darkred'
             }
         }
         changeStylingBasedOnCurrentBG();
