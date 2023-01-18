@@ -65,7 +65,6 @@ main {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bb-green);
     border: 1px solid white;
     color: white;
     padding: var(--size-8) var(--size-16);
