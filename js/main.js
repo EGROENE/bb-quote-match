@@ -1,14 +1,29 @@
 // FUNCTIONALITY TO CHANGE PAGE BACKGROUND IMAGE:
-const backgrounds = [
-    './assets/bg-one.jpg',
-    './assets/bg-two.jpg'
-]
-
-const setBG = () => {
+let backgrounds = '';
+if (screen.width <= 414) {
+    console.log('hi')
+    backgrounds = [
+        './assets/bg-two.jpg',
+        './assets/bg-three.png'
+    ]
+    console.log(backgrounds)
+    let randNum = Math.floor(Math.random() * backgrounds.length);
+    document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
+} else {
+    backgrounds = [
+        './assets/bg-one.jpg',
+        './assets/bg-two.jpg'
+    ]
+    console.log(backgrounds)
     let randNum = Math.floor(Math.random() * backgrounds.length);
     document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
 }
-setBG();
+
+/* const setBG = () => {
+    let randNum = Math.floor(Math.random() * backgrounds.length);
+    document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
+}
+setBG(); */
 const bgOneImg = 'url("./assets/bg-one.jpg")';
 ///////////////////////////////////////////////
 
