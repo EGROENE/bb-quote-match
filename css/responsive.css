@@ -241,6 +241,7 @@
 
     #game-over header {
         line-height: var(--size-36);
+        font-size: var(--size-24);
     }
 
     #game-over button {
