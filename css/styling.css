@@ -21,9 +21,9 @@
 
 body {
     background-size: cover;
-/*     background-attachment: fixed;
- */    background-position: center;
-    font-family: monospace;
+    background-attachment: fixed;
+/*     background-position: center;
+ */    font-family: monospace;
 }
 
 main {
