@@ -2,20 +2,25 @@
 let backgrounds = '';
 if (screen.width <= 414) {
     backgrounds = [
-        './assets/bg-two.jpg', './assets/bg-three.png'];
+        './assets/bg-two.jpg', './assets/bg-three.png', './assets/bg-four.jpg'];
     let randNum = Math.floor(Math.random() * backgrounds.length);
     document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
 } else {
-    backgrounds = ['./assets/bg-one.jpg', './assets/bg-two.jpg', './assets/bg-three.png'];
+    backgrounds = ['./assets/bg-one.jpg', './assets/bg-two.jpg', './assets/bg-three.png', './assets/bg-four.jpg'];
     let randNum = Math.floor(Math.random() * backgrounds.length);
     document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
 }
 const bgTwoImg = 'url("./assets/bg-two.jpg")';
+const bgFourImg = 'url("./assets/bg-four.jpg")';
+
+const startBtns = document.getElementsByClassName('start-btn');
+for (let btn of startBtns) {
+    document.body.style.backgroundImage === bgFourImg ? btn.style.backgroundColor = 'var(--bb-blue)' : btn.style.backgroundColor = 'var(--bb-green)';
+}
 ///////////////////////////////////////////////
 
 // On click of 'start' buttons in welcome box, hide welcome box and display #in-game-header & #card-area:
 let cardsToDisplay = 0;
-const startBtns = document.getElementsByClassName('start-btn');
 for (let btn of startBtns) {
     btn.addEventListener('click', function() {
         document.getElementsByTagName('main')[0].style.height = '100%';
@@ -295,16 +300,38 @@ for (let btn of startBtns) {
         // Display initial match tally:
         matchTally.textContent += totalMatches + ' / ' + (charCards.length / 2);
 
-        // Change cards' border color, depending on current bg:
+        // Change various styling, based on bg:
         const changeStylingBasedOnCurrentBG = () => {
             if (document.body.style.backgroundImage === bgTwoImg) {
                 inGameHeader.style.backgroundColor = 'var(--bb-green)';
+            } else if (document.body.style.backgroundImage === bgFourImg) {
+                inGameHeader.style.backgroundColor = 'black';
+                inGameHeader.style.color = 'var(--bb-blue)';
             } else {
                 inGameHeader.style.backgroundColor = 'darkred';   
                 inGameHeader.style.color = 'white';     
             }
+            // Change styling of cards, based on bg:
             for (let card of charCards) {
-                document.body.style.backgroundImage === bgTwoImg ? card.style.borderColor = 'var(--bb-green)' : card.style.borderColor = 'darkred'
+                if (document.body.style.backgroundImage === bgTwoImg) {
+                    card.style.borderColor = 'var(--bb-green)';
+                } else if (document.body.style.backgroundImage === bgFourImg) {
+                    card.style.borderColor = 'white';
+                } else {
+                    card.style.borderColor = 'darkred';
+                }
+            }
+            const cardBacks = document.getElementsByClassName('card-back');
+            for (let cardBack of cardBacks) {
+                if (document.body.style.backgroundImage === bgFourImg) {
+                    cardBack.style.content = 'url(./assets/meth-logo.jpg)';
+                    cardBack.style.height = 'auto';
+                    cardBack.style.width = '71%';
+                } else {
+                    cardBack.style.content = 'url(./assets/bb-logo.png)';
+                    cardBack.style.height = '43';
+                    cardBack.style.width = '71%';
+                }
             }
         }
         changeStylingBasedOnCurrentBG();
