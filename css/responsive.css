@@ -204,6 +204,7 @@
 @media screen and (max-width: 414px) {
     body {
         background-size: 100vh, 100vw;
+        background-attachment:scroll;
     }
 
     #welcome-box {
