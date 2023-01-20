@@ -1,8 +1,7 @@
 // FUNCTIONALITY TO CHANGE PAGE BACKGROUND IMAGE:
 let backgrounds = '';
 if (screen.width <= 414) {
-    backgrounds = [
-        './assets/bg-two.jpg', './assets/bg-three.png', './assets/bg-four.jpg'];
+    backgrounds = ['./assets/bg-two.jpg', './assets/bg-three.png', './assets/bg-four.jpg'];
     let randNum = Math.floor(Math.random() * backgrounds.length);
     document.body.style.backgroundImage = 'url(' + backgrounds[randNum] + ')'; 
 } else {
