@@ -66,6 +66,14 @@
     #match-tally-container p, #elapsed-time-container p {
         font-size: var(--size-36);
     }
+
+    img-container img {
+        height: 22rem;
+    }
+
+    .info-card p {
+        font-size: var(--size-42);
+    }
 }
 
 @media screen and (min-width: 1440px) {
