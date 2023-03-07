@@ -54,6 +54,20 @@
     }
 }
 
+@media screen and (min-width: 1536) and (min-height: 2048px) {
+    #card-area {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #in-game-header {
+        font-size: var(--size-48);
+    }
+
+    #match-tally-container p, #elapsed-time-container p {
+        font-size: var(--size-36);
+    }
+}
+
 @media screen and (min-width: 1440px) {
     #welcome-box {
         line-height: 5rem;
@@ -103,6 +117,24 @@
 
     #game-over div {
         line-height: 3rem;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    #card-area {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: var(--size-32);
+    }
+}
+
+@media screen and (max-width: 820px) {
+    /* #card-area {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: var(--size-32);
+    } */
+
+    .img-container img {
+        height: 11rem;
     }
 }
 
