@@ -68,7 +68,7 @@
     }
 
     img-container img {
-        height: 22rem;
+        height: 21rem;
     }
 
     .info-card p {
@@ -89,6 +89,12 @@
 @media screen and (max-width: 1280px) {
     #game-over div {
         line-height: 5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) and (max-width: 1366px) {
+    #card-area {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
