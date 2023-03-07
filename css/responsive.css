@@ -202,6 +202,13 @@
     }
 }
 
+
+@media screen and (max-width: 615px) and (max-height: 985px) {
+    .img-container img {
+        height: 10rem;
+    }
+}
+
 @media screen and (max-width: 601px) {
     #match-tally-container p, 
     #elapsed-time-container p {
