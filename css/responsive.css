@@ -54,7 +54,7 @@
     }
 }
 
-@media screen and (min-width: 1536) and (min-height: 2048px) {
+@media screen and (min-width: 1536px) and (min-height: 2048px) {
     #card-area {
         grid-template-columns: repeat(3, 1fr);
     }
