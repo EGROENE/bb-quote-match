@@ -247,6 +247,12 @@
     }
 }
 
+@media screen and (max-width: 500px) and (max-height: 853px) {
+    .img-container img {
+        height: 10rem;
+    }
+}
+
 @media screen and (max-width: 414px) {
     body {
         background-size: 100vh, 100vw;
