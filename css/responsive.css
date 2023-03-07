@@ -93,6 +93,12 @@
 }
 
 @media screen and (max-width: 1024px) and (max-width: 1366px) {
+    #welcome-box button, 
+    #game-over button {
+        margin: var(--size-16);
+        border-radius: var(--size-48);
+    }
+
     #card-area {
         grid-template-columns: repeat(3, 1fr);
     }
