@@ -266,6 +266,12 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+    .img-container img {
+        height: 10rem;
+    }
+}
+
 @media screen and (max-width: 414px) {
     body {
         background-size: 100vh, 100vw;
@@ -349,5 +355,9 @@
 
     #welcome-box p {
         font-size: var(--size-20);
+    }
+
+    .img-container img {
+        height: 6rem;
     }
 }
