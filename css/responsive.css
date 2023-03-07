@@ -134,6 +134,12 @@
     }
 }
 
+@media screen and (max-width: 914px) and (max-height: 1463px) {
+    .img-container img {
+        height: 12rem;
+    }
+}
+
 @media screen and (max-width: 912px) {
     #card-area {
         grid-template-columns: repeat(3, 1fr);
@@ -205,7 +211,7 @@
 
 @media screen and (max-width: 615px) and (max-height: 985px) {
     .img-container img {
-        height: 10rem;
+        height: 7rem;
     }
 }
 
