@@ -341,3 +341,13 @@
         padding: var(--size-12);
     }
 }
+
+@media screen and (max-width: 320px) {
+    #welcome-box header {
+        font-size: var(--size-24);
+    }
+
+    #welcome-box p {
+        font-size: var(--size-20);
+    }
+}
