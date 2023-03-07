@@ -95,6 +95,7 @@ main {
 #ig-header-elems {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 #match-tally-container {
