@@ -1,4 +1,7 @@
 ﻿# bb-quote-match
+
+NOTE: This is one of my first JavaScript projects. I have not maintained the code, nor revised it, so please refrain from judging my current abilities based on the code you see here. I got the project to work how I envisioned. I may revamp the code if I have the time in the future.
+ 
 This is a matching game I built with HTML, CSS, & vanilla JavaScript, in which the user attempts to match quotes from Breaking Bad with the characters who said them. There are 2 modes in which the user can play; one contains 8 matches (easy mode) & the other 16 (hard mode). In 'easy' mode, 8 random characters are selected from a total of 16, & all 16, of course, display in 'hard' mode. In either case, the cards are randomly displayed on the page. Total matches that the user makes throughout the game are tracked, as well as time that elapsed since the start of the game. Users can only select 2 cards in a single turn, after which the cards are either reset, or 'flipped back over', or they remain flipped, depending on if they match or not. At the end of the game, the user sees a funny, randomly selected Breaking Bad GIF, as well as a nice message, & is given the option to play again.
   
 In summary, this required the ability to use HTML, CSS features such as grid & flexbox, add animations, create JS objects & arrays & access the information inside them, as well as work with various types of functions, & manipulate DOM elements & CSS styling properties with JS.  
